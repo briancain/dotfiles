@@ -24,6 +24,7 @@ alias skim='open -a "Skim"'
 # git
 alias gl='git pull'
 alias gp='git push'
+alias gpo='git push origin master'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
