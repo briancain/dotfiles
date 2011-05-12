@@ -180,8 +180,8 @@ endfunction
 " }}}
 
 " Display hidden characters (paragraph,eol) with \s
-nmap <leader>s :set list!<CR>
-set listchars=tab:▸\ ,eol:¬
+"nmap <leader>s :set list!<CR>
+"set listchars=tab:▸\ ,eol:¬
 
 
 "-----------------------------------------------------------------------------
