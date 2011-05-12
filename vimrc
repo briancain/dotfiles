@@ -1,207 +1,236 @@
-" based on http://github.com/jferris/config_files/blob/master/vimrc
-
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off
 
-" allow backspacing over everything in insert mode
+"-----------------------------------------------------------------------------
+" Pathogen: http://www.vim.org/scripts/script.php?script_id=2332
+" This needs to occur after filetype off and before filetype plugin on
+"-----------------------------------------------------------------------------
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+" Mixed signals on this command, but it seems common enough to use
+filetype plugin indent on
+" Python stuff from
+" http://www.sontek.net/python-with-a-modular-ide-vim
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+"-----------------------------------------------------------------------------
+" Encoding and general usability
+"-----------------------------------------------------------------------------
+
+nnoremap <Space> :
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
+set encoding=utf-8
+set scrolloff=3
+set showmode
+set showcmd
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set ttyfast
+set ruler
 set backspace=indent,eol,start
 
-set nobackup
-set nowritebackup
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+" Something for latex-suite
+let g:tex_flavor='latex'
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
+set display=lastline
 
-" This is an alternative that also works in block mode, but the deleted
-" text is lost and it only works for putting the current register.
-"vnoremap p "_dp
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-  set hlsearch
-endif
-
-" Switch wrap off for everything
-set nowrap
-
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
-
-  " Set File type to 'text' for files ending in .txt
-  autocmd BufNewFile,BufRead *.txt setfiletype text
-
-  " Enable soft-wrapping for text files
-  autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  " autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-
-  " Automatically load .vimrc source when saved
-  autocmd BufWritePost .vimrc source $MYVIMRC
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" if has("folding")
-  " set foldenable
-  " set foldmethod=syntax
-  " set foldlevel=1
-  " set foldnestmax=2
-  " set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
-" endif
-
-" Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-" Always display the status line
-set laststatus=2
-
-" \ is the leader character
-let mapleader = ","
-
-" Edit the README_FOR_APP (makes :R commands work)
-map <Leader>R :e doc/README_FOR_APP<CR>
-
-" Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
-
-" Hide search highlighting
-map <Leader>h :set invhls <CR>
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" Duplicate a selection
-" Visual mode: D
-vmap D y'>p
-
-" Press Shift+P while in visual mode to replace the selection without
-" overwriting the default register
-vmap P p :call setreg('"', getreg('0')) <CR>
-
-" For Haml
-au! BufRead,BufNewFile *.haml         setfiletype haml
-
-" No Help, please
-nmap <F1> <Esc>
-
-" Press ^F from insert mode to insert the current file name
-imap <C-F> <C-R>=expand("%")<CR>
-
-" Maps autocomplete to tab
-imap <Tab> <C-N>
-
-imap <C-L> <Space>=><Space>
-
-" Display extra whitespace
-" set list listchars=tab:»·,trail:·
-
-" Edit routes
-command! Rroutes :e config/routes.rb
-command! Rschema :e db/schema.rb
-
-" Local config
-if filereadable(".vimrc.local")
-  source .vimrc.local
-endif
-
-" Use Ack instead of Grep when available
-if executable("ack")
-  set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
-endif
-
-" Color scheme
-" colorscheme vividchalk
-" highlight NonText guibg=#060606
-" highlight Folded  guibg=#0A0A0A guifg=#9090D0
-
-" Numbers
+" Line numbering
 set number
-set numberwidth=5
+set relativenumber
 
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
+" Vim window stuff
+set linebreak
+set cursorline
 
-" Tab completion options
-" (only complete to the longest unambiguous match, and show a menu)
-set completeopt=longest,menu
-set wildmode=list:longest,list:full
-set complete=.,t
 
-" case only matters with mixed case expressions
+"-----------------------------------------------------------------------------
+" Search, highlight, spelling, etc.
+"-----------------------------------------------------------------------------
+
+" Improved searching
+nnoremap / /\v
+vnoremap / /\v
 set ignorecase
 set smartcase
 
-" Tags
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-set tags=./tags;
+set incsearch
+syntax on
 
-let g:fuf_splitPathMatching=1
+" Paragraph formatting stuff:
+set formatprg=par
 
-" Open URL
-command -bar -nargs=1 OpenURL :!open <args>
-function! OpenURL()
-  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
-  echo s:uri
-  if s:uri != ""
-	  exec "!open \"" . s:uri . "\""
+" Store temporary files in a central location
+set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
+set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
+
+
+" Omnifunction
+set omnifunc=syntaxcomplete#Complete
+
+" If a file has been changed outside of Vim, reload it inside of Vim
+set autoread
+
+"-----------------------------------------------------------------------------
+" Spacing
+"-----------------------------------------------------------------------------
+
+set autoindent
+set smartindent 
+set tabstop=2 shiftwidth=2 expandtab
+
+
+"-----------------------------------------------------------------------------
+" Buffers
+"-----------------------------------------------------------------------------
+
+" Delete all buffers with \da
+nmap <silent> <leader>da :exec "1," . bufnr('$') . "bd"<cr>
+
+" Let me switch buffers with unsaved changes
+set hidden
+
+
+"-----------------------------------------------------------------------------
+" Folds
+"-----------------------------------------------------------------------------
+
+set foldcolumn=0
+set foldmethod=marker "alternatives: indent, syntax, marker
+
+" map <leader>mv :mkview<CR>
+" map <leader>lv :loadview<CR>
+
+"-----------------------------------------------------------------------------
+" Keymap stuff
+"-----------------------------------------------------------------------------
+
+noremap <Up> gk 
+noremap <Down> gj
+
+" Toggle text wrapping with \w {{{
+noremap <silent> <Leader>w :call ToggleWrap()<CR>
+
+function ToggleWrap()
+  if &wrap
+    echo "Wrap OFF"
+    setlocal nowrap
+    set virtualedit=all
+    silent! nunmap <buffer> <Up>
+    silent! nunmap <buffer> <Down>
+    silent! nunmap <buffer> <Home>
+    silent! nunmap <buffer> <End>
+    silent! iunmap <buffer> <Up>
+    silent! iunmap <buffer> <Down>
+    silent! iunmap <buffer> <Home>
+    silent! iunmap <buffer> <End>
   else
-	  echo "No URI found in line."
+    echo "Wrap ON"
+    setlocal wrap linebreak nolist
+    set virtualedit=
+    setlocal display+=lastline
+    noremap  <buffer> <silent> <Up>   gk
+    noremap  <buffer> <silent> <Down> gj
+    noremap  <buffer> <silent> <Home> g<Home>
+    noremap  <buffer> <silent> <End>  g<End>
+    inoremap <buffer> <silent> <Up>   <C-o>gk
+    inoremap <buffer> <silent> <Down> <C-o>gj
+    inoremap <buffer> <silent> <Home> <C-o>g<Home>
+    inoremap <buffer> <silent> <End>  <C-o>g<End>
+  endif
+endfunction 
+" }}}
+
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
+noremap  <buffer> <silent> 0 g0
+noremap  <buffer> <silent> $ g$
+set mouse=a
+
+" Keymappings for :e
+map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR> 
+map <leader>es :sp <C-R>=expand("%:p:h")."/"<CR>
+map <leader>ev :vsp <C-R>=expand("%:p:h")."/"<CR>
+map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
+
+" Map for omnicomplete
+inoremap <F8> <C-X><C-O>
+
+" Access .vimrc with \vi
+nmap <silent> <leader>vi :e $MYVIMRC<CR>
+nmap <silent> <leader>vh :e ~/Documents/References/vim.txt<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Relative Number toggle (\rn) {{{
+nmap <silent> <leader>rn :call RelativeNumberToggle()<CR>
+function! RelativeNumberToggle()
+  if &number
+    echo "relativenumber ON"
+    setlocal relativenumber
+  else
+    if &relativenumber
+      echo "relativenumber OFF"
+      setlocal norelativenumber
+      setlocal number
+    endif
   endif
 endfunction
-map <Leader>w :call OpenURL()<CR>
+" }}}
 
+" Display hidden characters (paragraph,eol) with \s
+nmap <leader>s :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+
+"-----------------------------------------------------------------------------
+" Compiling code
+"-----------------------------------------------------------------------------
+
+" Compile Python with \p2 or \p3
+nmap <buffer> <leader>p2 :w<CR>:!/usr/bin/env python % <CR>
+nmap <buffer> <leader>p3 :w<CR>:!/usr/bin/env python3 % <CR>
+
+
+"-----------------------------------------------------------------------------
+" NERD Tree
+"-----------------------------------------------------------------------------
+
+" Invoke NERD Tree with \nt
+nmap <leader>nt :NERDTree<CR>
+
+" Toggle the NERD Tree on an off with F7
+nmap <F7> :NERDTreeToggle<CR>
+
+" Close the NERD Tree with Shift-F7
+nmap <S-F7> :NERDTreeClose<CR>
+
+
+
+"-----------------------------------------------------------------------------
+" Latex-Suite (which I no longer use)
+"-----------------------------------------------------------------------------
+"let g:Tex_ViewRule_pdf = '/Applications/Skim.app'
+
+
+"-----------------------------------------------------------------------------
+" Latex-Box
+"-----------------------------------------------------------------------------
+
+" These don't work (for me, at least)
+" Use \la instead, from ftplugin/tex.vim
+let g:LatexBox_viewer = 'skim'
+"let g:LatexBox_latexmk_options = '-pvc'
+
+"-----------------------------------------------------------------------------
+" utl.vim
+" Plugin for handling hyperlinks
+"-----------------------------------------------------------------------------
+
+" Set how Vim opens hyperlinks
+let g:utl_cfg_hdl_scm_http_system = 'silent !open "%u"'
+
+" Open hyperlinks with \fo
+" Think "Firefox-open"
+noremap <leader>fo :Utl<CR>

@@ -7,13 +7,27 @@ alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
 
+# Mvim
+alias v='mvim'
+alias vf='mvim -f'
+
+# Emacs
+alias e='emacs'
+
+# Latex
+alias lpdf='pdflatex'
+alias lrtf='latex2rtf'
+# Word is for opening RTF files quickly in Microsoft Word
+alias word='open -a "Microsoft Word"'
+alias skim='open -a "Skim"'
+
 # git
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
-alias gco='git checkout'
+alias go='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
