@@ -61,7 +61,7 @@ num=$(echo $(todo.sh ls +next | wc -l))
     let todos=num-2
     if [ $todos != 0 ]
     then
-echo "{$todos}"
+echo "{%{\e[0;31m%}$todos%{\e[0m%}}"
     else
 echo ""
     fi
@@ -73,8 +73,6 @@ echo ""
 export PROMPT=$'%{$fg[red]%}%{\e[0;36m%}%1/%{\e[0m%}/ '
 set_prompt () {
   export RPROMPT="$(todo) $(git_prompt_info)$(git_dirty)$(need_push)"
-#  export RPROMPT="$(git_prompt_info)$(git_dirty)$(need_push)"
-#  export RPROMPT="%{$fg_bold[grey]%}$(todo)%{$reset_color%}"
 }
 
 
