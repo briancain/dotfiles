@@ -94,11 +94,21 @@ set hidden
 
 
 "-----------------------------------------------------------------------------
-" Folds
+" Folds and folding
 "-----------------------------------------------------------------------------
 
 set foldcolumn=0
 set foldmethod=marker "alternatives: indent, syntax, marker
+
+" Change what folded lines show (currently disabled)
+function! MyFoldText()
+    let nl = v:foldend - v:foldstart + 1
+    let comment = substitute(getline(v:foldstart),"^ *","",1)
+    let linetext = substitute(getline(v:foldstart+1),"^ *","",1)
+    let txt = '+ ' . linetext . ' : "' . comment . '" : length ' . nl
+    return txt
+endfunction
+" set foldtext=MyFoldText()
 
 " map <leader>mv :mkview<CR>
 " map <leader>lv :loadview<CR>

@@ -6,7 +6,12 @@ set lines=40
 set columns=82
   
 " default macvim colorscheme:
-colorscheme wombat
+"colorscheme wombat
+
+" Solarized color scheme for vim and gvim
+set background=light
+colorscheme solarized 
+call togglebg#map("<leader>bg")
 
 " font-style and font-size
 set guifont=inconsolata:h26
