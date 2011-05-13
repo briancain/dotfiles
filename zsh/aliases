@@ -3,8 +3,8 @@ alias ..='cd ..'
 
 # ls
 alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -l"
+alias ll="ls -lAh"
+alias l="ls -l"
 alias la='ls -A'
 
 # grc overrides for ls
