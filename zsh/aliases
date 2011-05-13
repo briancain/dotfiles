@@ -14,7 +14,7 @@ if $(gls &>/dev/null)
 then
   alias ls="gls --color"
   alias ll="gls -lAh --color"
-  alias l="gls -l --color"
+  alias l="gls -lh --color"
   alias la='gls -A --color'
 fi
 
