@@ -7,7 +7,7 @@ alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
 
-# grc overides for ls
+# grc overrides for ls
 # Made possible through contributions from generous benefactors like
 # `brew install coreutils`
 if $(gls &>/dev/null)
@@ -31,6 +31,10 @@ alias lrtf='latex2rtf'
 # Word is for opening RTF files quickly in Microsoft Word
 alias word='open -a "Microsoft Word"'
 alias skim='open -a "Skim"'
+
+# Python
+alias p='python'
+alias p3='python3'
 
 # git
 alias gl='git pull'
