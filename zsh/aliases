@@ -4,7 +4,7 @@ alias ..='cd ..'
 # ls
 alias ls="ls -F"
 alias ll="ls -lAh"
-alias l="ls -l"
+alias l="ls -lh"
 alias la='ls -A'
 
 # grc overrides for ls
