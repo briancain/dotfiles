@@ -124,6 +124,6 @@
   ;; org-mode }}}
 
   ;; Start with agenda list right away
-(add-hook 'after-init-hook '(lambda () (org-agenda-list 1)))
-(setq initial-buffer-choice 'org-agenda-list)
+"(add-hook 'after-init-hook '(lambda () (org-agenda-list 1)))
+"(setq initial-buffer-choice 'org-agenda-list)
 
