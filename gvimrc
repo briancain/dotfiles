@@ -1,4 +1,3 @@
-
 " set the height of my window:
 set lines=40
 
@@ -14,6 +13,21 @@ call togglebg#map("<leader>bg")
 " Note: This comes after the Solarized option above. The following should be
 " commented out if I intend to use the Solarized color scheme.
 colorscheme wombat
+
+" Toggle wombat and solarized-light with \cc {{{
+let g:colortoggle=0
+nmap <silent> <leader>cc :call ColorToggle()<CR>
+function! ColorToggle()
+  if g:colortoggle==0
+    colorscheme solarized
+    set background=light
+    let g:colortoggle=1
+  else
+    colorscheme wombat
+    let g:colortoggle=0
+  endif
+endfunction
+" Toggle wombat and solarized-light with \cc }}}
 
 " font-style and font-size
 set guifont=inconsolata:h26
