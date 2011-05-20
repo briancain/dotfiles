@@ -4,3 +4,5 @@
 .*.swp
 *.bak
 vim/bundle
+muttrc
+mutt
