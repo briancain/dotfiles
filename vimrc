@@ -244,3 +244,4 @@ let g:utl_cfg_hdl_scm_http_system = 'silent !open "%u"'
 " Open hyperlinks with \fo
 " Think "Firefox-open"
 noremap <leader>fo :Utl<CR>
+

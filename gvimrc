@@ -30,6 +30,7 @@ endfunction
 " Toggle wombat and solarized-light with \cc }}}
 
 " font-style and font-size
+
 set guifont=inconsolata:h26
 
 " get rid of left scrollbar when splitting vertically

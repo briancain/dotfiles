@@ -5,7 +5,7 @@
 
 git_bundles = [  
 #  "git://github.com/msanders/snipmate.vim.git",
-  "git://github.com/charlietanksley/snipmate.vim.git",
+#  "git://github.com/charlietanksley/snipmate.vim.git",
   "git://github.com/scrooloose/nerdtree.git",
   "git://github.com/tpope/vim-fugitive.git",
   "git://github.com/tpope/vim-git.git",
