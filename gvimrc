@@ -45,6 +45,7 @@ set guioptions-=T
 set guioptions=ac
 
 " Set up the gui cursor to look nice
+set cursorline
 set guicursor=n-v-c:block-Cursor-blinkon0
 set guicursor+=ve:ver35-Cursor
 set guicursor+=o:hor50-Cursor

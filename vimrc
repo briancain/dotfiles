@@ -43,7 +43,6 @@ set relativenumber
 
 " Vim window stuff
 set linebreak
-set cursorline
 
 
 "-----------------------------------------------------------------------------
