@@ -1,4 +1,4 @@
-﻿" Most of this ripped from Charlie Tanksley
+" Most of this ripped from Charlie Tanksley
 
 "setlocal formatoptions+=tcwa
 " The a option is messed up for some reason
