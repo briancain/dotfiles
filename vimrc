@@ -17,10 +17,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "-----------------------------------------------------------------------------
 " Encoding and general usability
 "-----------------------------------------------------------------------------
-
-" 256 color terminal with iTerm
-set t_Co=256
-
 nnoremap <Space> :
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
