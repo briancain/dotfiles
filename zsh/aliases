@@ -1,6 +1,9 @@
 # cd
 alias ..='cd ..'
 
+# pianobar
+alias pb="pianobar"
+
 # ls
 alias ls="ls -F"
 alias ll="ls -lAh"
