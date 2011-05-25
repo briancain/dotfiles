@@ -1,11 +1,11 @@
 vim/.netrwhist
 vim/.VimballRecord
-rtorrent.rc
+vim/bundler
 .DS_Store
 .svn
 *~
 .*.swp
 *.bak
-vim/bundle
+torrent.rc
 muttrc
 mutt
