@@ -1,4 +1,3 @@
-= Sergey Kutserubov's Dot Files
+= Brian Cain's Dot Files
 
-These are the config files I use on my Mac OSX machine. It is worth noting that these dot files are primarily forked from Ryan Bates' repo. As of this point, I have heavily modified only files relating to vim. 
-
+These files were forked from Ryan Bates' repo. VIM customization was done by Sergey Kutserubov.i
