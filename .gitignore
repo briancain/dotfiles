@@ -1,3 +1,11 @@
 vim/.netrwhist
 vim/.VimballRecord
 rtorrent.rc
+.DS_Store
+.svn
+*~
+.*.swp
+*.bak
+vim/bundle
+muttrc
+mutt
