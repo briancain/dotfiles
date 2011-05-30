@@ -2,7 +2,7 @@
 
 highlight CmdLine background: white; color: black; -moz-transition: all 0.25s; font-size:14pt
 highlight Hint font-family: monospace; font-size: 12px; font-weight: bold; text-transform: uppercase; color: white; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px; 
-source! /Users/Sergey/.vimperatorrc.local
+source! /Users/briancain/.vimperatorrc.local
 
 " vim: set ft=vimperator:
 
