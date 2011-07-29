@@ -22,8 +22,12 @@ then
 fi
 
 # Mvim
-alias v='mvim'
-alias vf='mvim -f'
+alias mv='mvim'
+alias mvf='mvim -f'
+
+# VIM
+alias v='vim'
+alias vf='vim -f'
 
 # Latex
 alias lpdf='pdflatex'
