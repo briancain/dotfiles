@@ -1,8 +1,8 @@
-# cd
-alias ..='cd ..'
-
 # pianobar
 alias pb="pianobar"
+
+# clear
+alias cl="clear"
 
 # ls
 alias ls="ls -F"
@@ -25,9 +25,6 @@ fi
 alias v='mvim'
 alias vf='mvim -f'
 
-# Emacs
-alias e='emacs'
-
 # Latex
 alias lpdf='pdflatex'
 alias lrtf='latex2rtf'
@@ -37,7 +34,6 @@ alias skim='open -a "Skim"'
 
 # Python
 alias p='python'
-alias p3='python3'
 
 # git
 alias gl='git pull'
