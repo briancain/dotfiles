@@ -7,5 +7,3 @@ vim/bundler
 .*.swp
 *.bak
 torrent.rc
-muttrc
-mutt
