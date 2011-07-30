@@ -1,3 +1,3 @@
-= Brian Cain's Dot Files
+= Brian's Dot Files
 
 These files were forked from Ryan Bates' repo. VIM customization was done by Sergey Kutserubov. I plan on adding anything else that I see would help make these dot files run smoother.
