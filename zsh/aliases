@@ -1,3 +1,6 @@
+# Reload ZSH
+alias reload!='. ~/.zshrc'
+
 # pianobar
 alias pb="pianobar"
 
@@ -15,7 +18,7 @@ alias la='ls -A'
 # `brew install coreutils`
 if $(gls &>/dev/null)
 then
-  alias ls="gls --color"
+  alias ls="gls -F --color"
   alias ll="gls -lAh --color"
   alias l="gls -lh --color"
   alias la='gls -A --color'
