@@ -1,5 +1,5 @@
 # Reload ZSH
-alias reload!='. ~/.zshrc'
+alias reload='. ~/.zshrc'
 
 # pianobar
 alias pb="pianobar"
