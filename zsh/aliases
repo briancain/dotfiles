@@ -1,3 +1,6 @@
+# K-State SSH
+alias kstate = "ssh -X -l bccain cislinux.cis.ksu.edu"
+
 # Reload ZSH
 alias reload='. ~/.zshrc'
 
