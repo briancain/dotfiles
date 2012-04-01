@@ -35,7 +35,7 @@ set display=lastline
 
 " Line numbering
 set number
-set relativenumber
+" set relativenumber
 
 " Vim window stuff
 set linebreak
