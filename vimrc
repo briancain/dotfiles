@@ -39,6 +39,7 @@ set number
 
 " Vim window stuff
 set linebreak
+set guifont=Inconsolata:h15
 
 
 "-----------------------------------------------------------------------------

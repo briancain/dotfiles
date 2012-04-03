@@ -31,7 +31,7 @@ endfunction
 
 " font-style and font-size
 
-set guifont=inconsolata:h26
+set guifont=Inconsolata:h15
 
 " get rid of left scrollbar when splitting vertically
 set go-=l
