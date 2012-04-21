@@ -113,8 +113,8 @@ endfunction
 " Keymap stuff
 "-----------------------------------------------------------------------------
 
-noremap <Up> gk 
-noremap <Down> gj
+" noremap <Up> gk 
+" noremap <Down> gj
 
 " Toggle text wrapping with \w {{{
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
