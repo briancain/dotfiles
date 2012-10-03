@@ -1,3 +1,6 @@
+# ssh
+alias datviper="ssh bccain@viper.cis.ksu.edu"
+
 # Reload ZSH
 alias reload='. ~/.zshrc'
 
