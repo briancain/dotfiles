@@ -37,6 +37,9 @@ set display=lastline
 set number
 " set relativenumber
 
+" backspace
+
+
 " Vim window stuff
 set linebreak
 set guifont=Inconsolata:h15
