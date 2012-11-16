@@ -34,8 +34,6 @@ alias vf='vim -f'
 # Latex
 alias lpdf='pdflatex'
 alias lrtf='latex2rtf'
-ltx() { latex "$*"
-        pdflatex "$*"; }
 
 # Word is for opening RTF files quickly in Microsoft Word
 alias word='open -a "Microsoft Word"'
