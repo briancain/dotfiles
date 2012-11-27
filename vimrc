@@ -19,6 +19,9 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "-----------------------------------------------------------------------------
 nnoremap <Space> :
 
+set modeline
+set ls=2
+
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
 set encoding=utf-8
 set scrolloff=3
