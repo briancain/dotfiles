@@ -1,5 +1,6 @@
 # ssh
 alias datviper="ssh bccain@viper.cis.ksu.edu"
+alias viperX="ssh -X bccain@cislinux.cis.ksu.edu"
 
 # Reload ZSH
 alias reload='. ~/.zshrc'
@@ -15,6 +16,10 @@ alias ls="ls -F"
 alias ll="ls -lAh"
 alias l="ls -lh"
 alias la='ls -A'
+
+# XSB
+# alias xsb="~/Downloads/XSB/bin/xsb"
+
 
 # grc overrides for ls
 # Made possible through contributions from generous benefactors like
