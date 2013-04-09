@@ -49,6 +49,7 @@ alias p='python'
 
 # git
 alias gl='git pull'
+alias glo='git pull origin master'
 alias gp='git push'
 alias gpo='git push origin master'
 alias gd='git diff'
