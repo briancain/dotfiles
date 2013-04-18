@@ -19,6 +19,9 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "-----------------------------------------------------------------------------
 nnoremap <Space> :
 
+set splitbelow
+set splitright
+
 set modeline
 set ls=2
 
