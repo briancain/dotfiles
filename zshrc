@@ -6,3 +6,5 @@
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && . ~/.localrc
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
