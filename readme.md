@@ -16,4 +16,4 @@ Then use rake (in the .dotfiles/ folder) to link the config files to the homedir
 
 ## Old Dotfiles
 
-Originally forked from Digital, however the only thing left from that is the handy Rakefile to link rcs to your homedir. Very very useful!
+Originally forked from Dejital, however the only thing left from that is the handy Rakefile to link rcs to your homedir. Very very useful!
