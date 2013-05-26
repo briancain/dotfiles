@@ -15,6 +15,37 @@ filetype plugin indent on
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 "-----------------------------------------------------------------------------
+" Vundle Config
+"-----------------------------------------------------------------------------
+
+set rtp+=~/.dotfiles/vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'Gundo'
+
+filetype plugin indent on
+
+" Shortcuts for FF
+if v:version >= 703
+    nmap <silent> st     :FufFileWithCurrentBufferDir<CR>
+    nmap <silent> sT     :FufFileWithFullCwd<CR>
+    nmap <silent> s<C-t> :FufFile<CR>
+    nmap <silent> sn     :FufCoverageFileChange<CR>
+    nmap <silent> sN     :FufCoverageFileChange<CR>
+    nmap <silent> sd     :FufDirWithCurrentBufferDir<CR>
+    nmap <silent> sD     :FufDirWithFullCwd<CR>
+    nmap <silent> s<C-d> :FufDir<CR>
+    nmap <silent> sb     :FufMruFile<CR>
+    nmap <silent> sB     :FufMruFileInCwd<CR>
+endif
+
+" Gundo mapping
+nnoremap <silent> <C-U> :GundoToggle<CR>
+
+"-----------------------------------------------------------------------------
 " Encoding and general usability
 "-----------------------------------------------------------------------------
 nnoremap <Space> :

@@ -1,10 +1,9 @@
 vim/.netrwhist
 vim/.VimballRecord
-vim/bundler
+vim/bundler/
 .DS_Store
 .svn
 *~
 .*.swp
 *.bak
 torrent.rc
-zsh/
