@@ -6,7 +6,8 @@ set columns=82
   
 " Solarized color scheme for vim and gvim
 set background=light
-colorscheme solarized 
+"colorscheme solarized 
+colorscheme corporation
 call togglebg#map("<leader>bg")
 
 " Switch to wombat colorscheme

@@ -25,6 +25,7 @@ Bundle 'gmarik/vundle'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Gundo'
+Bundle 'flazz/vim-colorschemes'
 
 filetype plugin indent on
 
