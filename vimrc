@@ -43,13 +43,24 @@ set display=lastline
 set number
 " set relativenumber
 
-" backspace
-
-
 " Vim window stuff
 set linebreak
 set guifont=Inconsolata:h15
 
+" Show tabs and trailing whitespace visually
+if (&termencoding == "utf-8") || has("gui_running")
+  if v:version >= 700
+    set list listchars=tab:»·,trail:·,extends:…,nbsp:‗
+  else
+    set list listchars=tab:»·,trail:·,extends:…
+  endif
+else
+  if v:version >= 700
+    set list listchars=tab:>-,trail:.,extends:>,nbsp:_
+  else
+    set list listchars=tab:>-,trail:.,extends:>
+  endif
+endif
 
 "-----------------------------------------------------------------------------
 " Search, highlight, spelling, etc.
@@ -62,7 +73,11 @@ set ignorecase
 set smartcase
 
 set incsearch
-syntax on
+
+" Enable syntax highlighting, if one exists
+if has("syntax")
+    syntax on
+endif
 
 " Paragraph formatting stuff:
 set formatprg=par
