@@ -49,9 +49,8 @@ nnoremap <silent> <C-U> :GundoToggle<CR>
 " Better Bottom Bar
 "-----------------------------------------------------------------------------
 
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ [format=%{&ff}]\ [type=%Y]\ [ascii=\%03.3b]\ [hex=\%02.2B]\ [%04l,%04v][%p%%]\ [len=%L]
 set laststatus=2
-
 
 "-----------------------------------------------------------------------------
 " Encoding and general usability
@@ -140,7 +139,6 @@ set autoindent
 set smartindent 
 set tabstop=4 shiftwidth=4 expandtab
 
-
 "-----------------------------------------------------------------------------
 " Buffers
 "-----------------------------------------------------------------------------
@@ -150,7 +148,6 @@ nmap <silent> <leader>da :exec "1," . bufnr('$') . "bd"<cr>
 
 " Let me switch buffers with unsaved changes
 set hidden
-
 
 "-----------------------------------------------------------------------------
 " Folds and folding
@@ -252,7 +249,6 @@ endfunction
 "nmap <leader>s :set list!<CR>
 "set listchars=tab:▸\ ,eol:¬
 
-
 "-----------------------------------------------------------------------------
 " Compiling code
 "-----------------------------------------------------------------------------
@@ -260,7 +256,6 @@ endfunction
 " Compile Python with \p2 or \p3
 nmap <buffer> <leader>p2 :w<CR>:!/usr/bin/env python % <CR>
 nmap <buffer> <leader>p3 :w<CR>:!/usr/bin/env python3 % <CR>
-
 
 "-----------------------------------------------------------------------------
 " NERD Tree
@@ -274,8 +269,6 @@ nmap <F7> :NERDTreeToggle<CR>
 
 " Close the NERD Tree with Shift-F7
 nmap <S-F7> :NERDTreeClose<CR>
-
-
 
 "-----------------------------------------------------------------------------
 " Latex-Suite (which I no longer use)
@@ -302,7 +295,6 @@ filetype indent on
 " " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-
 
 "-----------------------------------------------------------------------------
 " Latex-Box
