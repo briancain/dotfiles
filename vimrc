@@ -5,27 +5,47 @@ filetype off
 " Pathogen: http://www.vim.org/scripts/script.php?script_id=2332
 " This needs to occur after filetype off and before filetype plugin on
 "-----------------------------------------------------------------------------
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
 
 " Mixed signals on this command, but it seems common enough to use
-filetype plugin indent on
+"filetype plugin indent on
 " Python stuff from
 " http://www.sontek.net/python-with-a-modular-ide-vim
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 "-----------------------------------------------------------------------------
 " Vundle Config
 "-----------------------------------------------------------------------------
 
+" Setting up Vundle
+" Found here: http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+let has_vundle=1
+let vundle_readme=expand('~/.dotfiles/vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle..."
+    echo ""
+    silent !mkdir -p ~/.dotfiles/vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    let has_vundle=0
+endif
+
 set rtp+=~/.dotfiles/vim/bundle/vundle/
 call vundle#rc()
 
+" Required
 Bundle 'gmarik/vundle'
+" Bundles go here"
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Gundo'
 Bundle 'flazz/vim-colorschemes'
+" Installing plugins the first time
+if has_vundle == 0
+    echo "Installing Bundles, please ignore key map error messages"
+    echo ""
+    :BundleInstall
+endif
 
 filetype plugin indent on
 
