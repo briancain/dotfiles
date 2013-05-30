@@ -5,14 +5,14 @@ filetype off
 " Pathogen: http://www.vim.org/scripts/script.php?script_id=2332
 " This needs to occur after filetype off and before filetype plugin on
 "-----------------------------------------------------------------------------
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " Mixed signals on this command, but it seems common enough to use
-"filetype plugin indent on
+filetype plugin indent on
 " Python stuff from
 " http://www.sontek.net/python-with-a-modular-ide-vim
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 "-----------------------------------------------------------------------------
 " Vundle Config
