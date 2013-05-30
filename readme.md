@@ -14,6 +14,8 @@ Then use rake (in the .dotfiles/ folder) to link the config files to the homedir
 
         $ rake install
 
+All vim bundles will be auto installed once you open vim.
+
 ## Old Dotfiles
 
 Originally forked from Dejital, however the only thing left from that is the handy Rakefile to link rcs to your homedir. Very very useful!
