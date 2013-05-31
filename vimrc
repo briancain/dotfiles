@@ -40,6 +40,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Gundo'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'hunner/vim-puppet'
 " Installing plugins the first time
 if has_vundle == 0
     echo "Installing Bundles, please ignore key map error messages"
