@@ -19,3 +19,13 @@ All vim bundles will be auto installed once you open vim.
 ## Old Dotfiles
 
 Originally forked from Dejital, however the only thing left from that is the handy Rakefile to link rcs to your homedir. Very very useful!
+
+### Works great on....
+
+Dotfile installation automation tested on operating systems such as....
+
+- Archlinux
+- Centos 5/6
+- Debian 6/7
+- Mac OSX 10.7/10.8
+- Ubuntu 13.04
