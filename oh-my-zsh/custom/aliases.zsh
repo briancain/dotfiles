@@ -2,6 +2,7 @@
 alias datviper="ssh bccain@viper.cis.ksu.edu"
 alias datcg="ssh bccain@cougar.cis.ksu.edu"
 alias ksuX="ssh -X bccain@cislinux.cis.ksu.edu"
+alias goirc="ssh -t bccain@viper.cis.ksu.edu screen -raAd"
 
 # Reload ZSH
 alias reload='. ~/.zshrc'
