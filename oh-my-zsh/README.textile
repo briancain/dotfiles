@@ -1,3 +1,5 @@
+!https://s3.amazonaws.com/ohmyzsh/oh-my-zsh-logo.png!
+
 oh-my-zsh is an open source, community-driven framework for managing your ZSH configuration. It comes bundled with a ton of helpful functions, helpers, plugins, themes, and few things that make you shout...
 
 bq. "OH MY ZSHELL!"
@@ -71,6 +73,8 @@ By default you will be prompted to check for updates. If you would like oh-my-zs
 To disable updates entirely, put this in your ~/.zshrc
 
 @DISABLE_AUTO_UPDATE=true@
+
+To upgrade directly from the command line, just run @upgrade_oh_my_zsh@
 
 h3. Uninstalling
 
