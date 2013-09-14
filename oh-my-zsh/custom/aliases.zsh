@@ -19,6 +19,9 @@ alias ll="ls -GlAh"
 alias l="ls -Glh"
 alias la='ls -GA'
 
+# tree
+alias tree="tree -C"
+
 # XSB
 # alias xsb="~/Downloads/XSB/bin/xsb"
 
