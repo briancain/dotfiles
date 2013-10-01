@@ -18,7 +18,7 @@ All vim bundles will be auto installed once you open vim.
 
 ## Old Dotfiles
 
-Originally forked from Dejital, however the only thing left from that is the handy Rakefile to link rcs to your homedir. Very very useful!
+Originally forked from Dejital, however the only thing left from that is the handy Rakefile to link rcs to your homedir. Very very useful! That repo is now moved to `old_dotfiles` since it really isn't a fork anymore.
 
 ### Works great on....
 

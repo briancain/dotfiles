@@ -191,7 +191,7 @@ set autoread
 "-----------------------------------------------------------------------------
 
 set autoindent
-set smartindent 
+set smartindent
 set tabstop=2 shiftwidth=2 expandtab
 
 "-----------------------------------------------------------------------------
@@ -357,7 +357,7 @@ let g:tex_flavor='latex'
 
 " These don't work (for me, at least)
 " Use \la instead, from ftplugin/tex.vim
-let g:LatexBox_viewer = 'skim'
+" let g:LatexBox_viewer = 'skim'
 "let g:LatexBox_latexmk_options = '-pvc'
 
 "-----------------------------------------------------------------------------
@@ -371,4 +371,3 @@ let g:utl_cfg_hdl_scm_http_system = 'silent !open "%u"'
 " Open hyperlinks with \fo
 " Think "Firefox-open"
 noremap <leader>fo :Utl<CR>
-
