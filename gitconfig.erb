@@ -4,6 +4,7 @@
 [alias]
 	co = checkout
 [color]
+  ui = true
 	diff = auto
 	status = auto
 	branch = auto
@@ -17,3 +18,5 @@
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [github]
 	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
