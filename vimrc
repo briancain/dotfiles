@@ -71,9 +71,6 @@ nnoremap <silent> <C-U> :GundoToggle<CR>
 " Better Bottom Bar
 "-----------------------------------------------------------------------------
 
-"set laststatus=2
-"set statusline=%F%m%r%h%w\ [%{&ff},%Y]\ [ascii=\%03.3b]\ [hex=\%02.2B]\ [%04l,%04v][%p%%]\ [len=%L]
-
 " Nice statusbar
 " https://github.com/hunner/hunners-homedir-configs/blob/master/.vimrc
 set laststatus=2
@@ -129,8 +126,6 @@ set visualbell
 set ttyfast
 set ruler
 set backspace=indent,eol,start
-
-" set display=lastline
 
 " Line numbering
 set number
@@ -261,7 +256,7 @@ function ToggleWrap()
     inoremap <buffer> <silent> <Home> <C-o>g<Home>
     inoremap <buffer> <silent> <End>  <C-o>g<End>
   endif
-endfunction 
+endfunction
 " }}}
 
 noremap  <buffer> <silent> k gk
@@ -299,18 +294,6 @@ function! RelativeNumberToggle()
   endif
 endfunction
 " }}}
-
-" Display hidden characters (paragraph,eol) with \s
-"nmap <leader>s :set list!<CR>
-"set listchars=tab:▸\ ,eol:¬
-
-"-----------------------------------------------------------------------------
-" Compiling code
-"-----------------------------------------------------------------------------
-
-" Compile Python with \p2 or \p3
-nmap <buffer> <leader>p2 :w<CR>:!/usr/bin/env python % <CR>
-nmap <buffer> <leader>p3 :w<CR>:!/usr/bin/env python3 % <CR>
 
 "-----------------------------------------------------------------------------
 " NERD Tree
