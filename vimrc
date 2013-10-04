@@ -49,7 +49,11 @@ Bundle 'FuzzyFinder'
 Bundle 'Gundo'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'hunner/vim-puppet'
-" Bundle 'snipMate'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+" Optional:
+Bundle "honza/vim-snippets"
 " Installing plugins the first time
 " If exists, skip
 if has_vundle == 0
