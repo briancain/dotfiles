@@ -1,10 +1,17 @@
+"-----------------------------------------------------------------------------
+" Vim Configuration (Dotfiles)
+"
+" Brian Cain
+"-----------------------------------------------------------------------------
+
 set nocompatible
-filetype off
 
 "-----------------------------------------------------------------------------
 " Pathogen: http://www.vim.org/scripts/script.php?script_id=2332
 " This needs to occur after filetype off and before filetype plugin on
 "-----------------------------------------------------------------------------
+
+filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -26,29 +33,29 @@ if !filereadable(vundle_readme)
     echo "Installing Vundle..."
     echo ""
     silent !mkdir -p ~/.dotfiles/vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    silent !git clone https://github.com/gmarik/vundle ~/.dotfiles/vim/bundle/vundle
     let has_vundle=0
 endif
 
+" Vundle setup config
 set rtp+=~/.dotfiles/vim/bundle/vundle/
 call vundle#rc()
 
-" Required
+" Required Bundle
 Bundle 'gmarik/vundle'
-" Bundles go here"
+" Additional Bundles go here"
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Gundo'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'hunner/vim-puppet'
 " Installing plugins the first time
+" If exists, skip
 if has_vundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""
     :BundleInstall
 endif
-
-filetype plugin indent on
 
 " Shortcuts for FF
 if v:version >= 703
@@ -91,7 +98,7 @@ if has("eval")
     endif
     return g:scm_cache[l:key]
   endfun
-  set statusline+=%{ScmInfo()}             " scm info
+  set statusline+=%{ScmInfo()}               " scm info
 endif
 set statusline+=%h%1*%m%r%w%0*               " flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'}, " filetype
@@ -309,7 +316,7 @@ nmap <F7> :NERDTreeToggle<CR>
 nmap <S-F7> :NERDTreeClose<CR>
 
 "-----------------------------------------------------------------------------
-" Latex-Suite (which I no longer use)
+" Latex-Suite
 "-----------------------------------------------------------------------------
 "let g:Tex_ViewRule_pdf = '/Applications/Skim.app'
 
