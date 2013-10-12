@@ -141,7 +141,6 @@ set backspace=indent,eol,start
 
 " Line numbering
 set number
-" set relativenumber
 
 " Vim window stuff
 set linebreak
