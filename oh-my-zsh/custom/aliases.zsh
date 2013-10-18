@@ -2,6 +2,8 @@
 alias datviper="ssh bccain@viper.cis.ksu.edu"
 alias datcg="ssh bccain@cougar.cis.ksu.edu"
 alias ksuX="ssh -X bccain@cislinux.cis.ksu.edu"
+
+# IRC connection
 alias goirc="ssh -t bccain@viper.cis.ksu.edu screen -raAd"
 
 # Reload ZSH
@@ -21,10 +23,6 @@ alias la='ls -GA'
 
 # tree
 alias tree="tree -C"
-
-# XSB
-# alias xsb="~/Downloads/XSB/bin/xsb"
-
 
 # grc overrides for ls
 # Made possible through contributions from generous benefactors like
