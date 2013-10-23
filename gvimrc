@@ -10,6 +10,8 @@ set background=light
 colorscheme corporation
 call togglebg#map("<leader>bg")
 
+set noballooneval
+
 " Switch to wombat colorscheme
 " Note: This comes after the Solarized option above. The following should be
 " commented out if I intend to use the Solarized color scheme.
