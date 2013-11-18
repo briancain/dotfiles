@@ -7,6 +7,14 @@
 set nocompatible
 
 "-----------------------------------------------------------------------------
+"
+" Markdown Syntax
+"
+"-----------------------------------------------------------------------------
+
+au BufRead,BufNewFile *.md set filetype=markdown
+
+"-----------------------------------------------------------------------------
 " Pathogen: http://www.vim.org/scripts/script.php?script_id=2332
 " This needs to occur after filetype off and before filetype plugin on
 "-----------------------------------------------------------------------------
