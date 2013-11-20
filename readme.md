@@ -16,6 +16,12 @@ Then use rake (in the .dotfiles/ folder) to link the config files to the homedir
 
 All vim bundles will be auto installed once you open vim.
 
+## Oh-My-Zsh Custom Theme
+
+I wrote my own theme, which you can find within the oh-my-zsh folder under themes. Here's a preview:
+
+![zsh-theme](http://i.imgur.com/dMQTDCC.png)
+
 ## Old Dotfiles
 
 Originally forked from Dejital, however the only thing left from that is the handy Rakefile to link rcs to your homedir. Very very useful! That repo is now moved to `old_dotfiles` since it really isn't a fork anymore.
