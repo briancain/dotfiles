@@ -1,6 +1,18 @@
-PROMPT='%{$fg_bold[green]%}%p%{$fg[cyan]%}%c%{$reset_color%}/ '
+# Display user and host in prompt
+local user_host='%{$terminfo[bold]$fg[green]%}%n@%m%{$reset_color%}'
 
-# git branch taken from Neal :)
+# Build left hand prompt
+PROMPT="${user_host}:%{$fg_bold[green]%}%p%{$fg[cyan]%}%c%{$reset_color%} $ "
+
+# rvm development
+# local rvm_ruby=''
+# if which rvm-prompt &> /dev/null; then
+#   rvm_ruby='%{$fg[red]%}[$(rvm-prompt i v g)]%{$reset_color%}'
+# else
+#   if which rbenv &> /dev/null; then
+#     rvm_ruby='%{$fg[red]%}[$(rbenv version | sed -e "s/ (set.*$//")]%{$reset_color%}'
+#   fi
+# fi
 
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
@@ -65,3 +77,4 @@ git_custom_status() {
 
 # Set the right-hand prompt
 RPS1='$(git_custom_status)'
+# RPS1+="${rvm_ruby}"
