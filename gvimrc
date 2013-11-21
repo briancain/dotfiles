@@ -6,8 +6,8 @@ set columns=82
   
 " Solarized color scheme for vim and gvim
 set background=light
-"colorscheme solarized 
-colorscheme corporation
+"colorscheme solarized
+colorscheme wombat256
 call togglebg#map("<leader>bg")
 
 set noballooneval
@@ -55,4 +55,3 @@ set guicursor+=o:hor50-Cursor
 set guicursor+=i-ci:ver25-Cursor
 set guicursor+=r-cr:hor20-Cursor
 set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
-
