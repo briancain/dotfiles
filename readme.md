@@ -8,11 +8,11 @@ Clone my dotfiles into a directory
 
         $ git clone https://github.com/briancain/dotfiles.git ~/.dotfiles
 
-Once you have that, copy which theme you want into the zshrc. Or use my default.
+Then run my simple install bash script
 
-Then use rake (in the .dotfiles/ folder) to link the config files to the homedir
+__Note:__ On OSX, this script assumes you have XCode command line tools installed, and then homebrew installed. It should take care of the rest.
 
-        $ rake install
+        $ source install.sh
 
 All vim bundles will be auto installed once you open vim.
 
@@ -33,5 +33,6 @@ Dotfile installation automation tested on operating systems such as....
 - Archlinux
 - Centos 5/6
 - Debian 6/7
-- Mac OSX 10.7/10.8
+- Mac OSX 10.7/10.8/10.9
+  + ASSUMPTIONS: You need XCode command line tools before installing
 - Ubuntu 13.04
