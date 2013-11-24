@@ -10,7 +10,10 @@ Clone my dotfiles into a directory
 
 Then run my simple install bash script
 
-__Note:__ On OSX, this script assumes you have XCode command line tools installed, and then homebrew installed. It should take care of the rest.
+__Note:__
+
+- On OSX, this script assumes you have XCode command line tools installed, and then homebrew installed. It should take care of the rest.
+- If on linux, it assumes you are using apt-get as your package manager.
 
         $ source install.sh
 
@@ -30,9 +33,7 @@ Originally forked from Dejital, however the only thing left from that is the han
 
 Dotfile installation automation tested on operating systems such as....
 
-- Archlinux
-- Centos 5/6
-- Debian 6/7
+- Debian based distros
+- Ubuntu based distros
 - Mac OSX 10.7/10.8/10.9
   + ASSUMPTIONS: You need XCode command line tools before installing
-- Ubuntu 13.04
