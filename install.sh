@@ -22,6 +22,6 @@ rake install
 echo "Changing shells to ZSH"
 chsh -s /bin/zsh
 echo "Reloading session"
-reload
+exec zsh
 
 echo "Operating System setup complete"
