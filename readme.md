@@ -6,16 +6,17 @@ Here are my custom dotfiles with a new '[oh-my-zsh](https://github.com/robbyruss
 
 Clone my dotfiles into a directory
 
-        $ git clone https://github.com/briancain/dotfiles.git ~/.dotfiles
+    $ git clone https://github.com/briancain/dotfiles.git ~/.dotfiles
 
 Then run my simple install bash script
+
+    $ source install.sh
 
 __Note:__
 
 - On OSX, this script assumes you have XCode command line tools installed, and then homebrew installed. It should take care of the rest.
 - If on linux, it assumes you are using apt-get as your package manager.
 
-        $ source install.sh
 
 All vim bundles will be auto installed once you open vim.
 
