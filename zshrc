@@ -11,11 +11,9 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="brian"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# My custom theme
+ZSH_THEME="brian"
 
 # ssh
 alias datviper="ssh bccain@viper.cis.ksu.edu"
@@ -30,9 +28,6 @@ alias reload='. ~/.zshrc'
 
 # pianobar
 alias pb="pianobar"
-
-# clear
-alias cl="clear"
 
 # ls
 alias ls="ls -GF"
@@ -64,10 +59,6 @@ alias lrtf='latex2rtf'
 
 # Word is for opening RTF files quickly in Microsoft Word
 alias word='open -a "Microsoft Word"'
-alias skim='open -a "Skim"'
-
-# Python
-alias p='python'
 
 # git
 alias gl='git pull'
@@ -135,7 +126,7 @@ alias %=' '
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm brew bundler)
+plugins=(git rvm brew)
 
 source $ZSH/oh-my-zsh.sh
 
