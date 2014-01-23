@@ -24,7 +24,6 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 " Mixed signals on this command, but it seems common enough to use
-filetype plugin indent on
 " Python stuff from
 " http://www.sontek.net/python-with-a-modular-ide-vim
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -62,6 +61,8 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
+"
+Bundle 'kchmck/vim-coffee-script'
 " Installing plugins the first time
 " If exists, skip
 if has_vundle == 0
@@ -83,6 +84,9 @@ if v:version >= 703
     nmap <silent> sb     :FufMruFile<CR>
     nmap <silent> sB     :FufMruFileInCwd<CR>
 endif
+
+syntax enable
+filetype plugin indent on
 
 " Gundo mapping
 nnoremap <silent> <C-U> :GundoToggle<CR>
