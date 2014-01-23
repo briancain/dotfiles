@@ -7,21 +7,24 @@
 
 echo "Setting up Operating System..."
 
-if [[ $OSTYPE == darwin* ]]; then
-  echo "You are running OSX: " $OSTYPE
-  echo "Using Homebrew to install packages"
-  brew install vim git tree
-else
-  echo "You are running Linux: " $OSTYPE
-  echo "Using apt-get to install packages...I hope you're using debian based repos."
-  sudo apt-get install vim rake git tree zsh
-fi
+set -e
+(
+  if [[ $OSTYPE == darwin* ]]; then
+    echo "You are running OSX: " $OSTYPE
+    echo "Using Homebrew to install packages"
+    brew install vim git tree
+  else
+    echo "You are running Linux: " $OSTYPE
+    echo "Using apt-get to install packages...I hope you're using debian based repos."
+    sudo apt-get install vim rake git tree zsh
+  fi
 
-echo "Installing dotfiles"
-rake install
-echo "Changing shells to ZSH"
-chsh -s /bin/zsh
-echo "Reloading session"
-exec zsh
+  echo "Installing dotfiles"
+  rake install
+  echo "Changing shells to ZSH"
+  chsh -s /bin/zsh
+  echo "Reloading session"
+  exec zsh
 
-echo "Operating System setup complete"
+  echo "Operating System setup complete"
+)
