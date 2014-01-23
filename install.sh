@@ -13,7 +13,7 @@ if [[ $OSTYPE == darwin* ]]; then
   brew install vim git tree
 else
   echo "You are running Linux: " $OSTYPE
-  echo "Using apt-get to install packages"
+  echo "Using apt-get to install packages...I hope you're using debian based repos."
   sudo apt-get install vim rake git tree zsh
 fi
 
