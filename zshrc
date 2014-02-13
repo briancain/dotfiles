@@ -23,7 +23,7 @@ alias ksuX="ssh -X bccain@cislinux.cis.ksu.edu"
 # IRC connection
 alias goirc="ssh -t bccain@viper.cis.ksu.edu screen -raAd"
 
-# Reload ZSH
+# Reload ZSH Config
 alias reload='. ~/.zshrc'
 
 # pianobar
@@ -35,7 +35,7 @@ alias ll="ls -GlAh"
 alias l="ls -Glh"
 alias la='ls -GA'
 
-# tree
+# tree with color
 alias tree="tree -C"
 
 # grc overrides for ls
