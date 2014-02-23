@@ -31,7 +31,7 @@ alias pb="pianobar"
 
 # ls
 alias ls="ls -GF"
-alias ll="ls -GlAh"
+alias ll="ls -Glah"
 alias l="ls -Glh"
 alias la='ls -GA'
 
