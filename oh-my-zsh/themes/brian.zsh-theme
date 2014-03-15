@@ -2,7 +2,7 @@
 local user_host='%{$terminfo[bold]$fg[green]%}%n@%m%{$reset_color%}'
 
 # Build left hand prompt
-PROMPT="${user_host}:%{$fg_bold[green]%}%p%{$fg[cyan]%}%c $ %{$reset_color%}"
+PROMPT="${user_host}:%{$fg_bold[green]%}%p%{$fg[blue]%}%c $ %{$reset_color%}"
 
 # rvm development
 # local rvm_ruby=''
