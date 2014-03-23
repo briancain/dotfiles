@@ -8,7 +8,7 @@ set columns=82
 set background=light
 "colorscheme solarized
 colorscheme wombat256
-call togglebg#map("<leader>bg")
+" call togglebg#map("<leader>bg")
 
 set noballooneval
 
