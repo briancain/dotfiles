@@ -24,7 +24,7 @@ All vim bundles will be auto installed once you open vim.
 
 I wrote my own theme, which you can find within the oh-my-zsh folder under themes. Here's a preview:
 
-![zsh-theme](http://i.imgur.com/dMQTDCC.png)
+![zsh-theme](http://i.imgur.com/WdGWogr.png)
 
 ## Old Dotfiles
 

@@ -15,20 +15,6 @@ set nocompatible
 au BufRead,BufNewFile *.md set filetype=markdown
 
 "-----------------------------------------------------------------------------
-" Pathogen: http://www.vim.org/scripts/script.php?script_id=2332
-" This needs to occur after filetype off and before filetype plugin on
-"-----------------------------------------------------------------------------
-
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
-" Mixed signals on this command, but it seems common enough to use
-" Python stuff from
-" http://www.sontek.net/python-with-a-modular-ide-vim
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-
-"-----------------------------------------------------------------------------
 " Vundle Config
 "-----------------------------------------------------------------------------
 
@@ -55,6 +41,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Gundo'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'scrooloose/nerdtree'
 Bundle 'hunner/vim-puppet'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
