@@ -20,6 +20,14 @@ __Note:__
 
 All vim bundles will be auto installed once you open vim.
 
+## Updating oh-my-zsh
+
+When you need to get the latest version of oh-my-zsh, just run the update script from the root directory of the project:
+
+    $ source update-zsh.sh
+
+__WARNING__: This will completely replace your oh-my-zsh folder with the latest version from Github.
+
 ## Oh-My-Zsh Custom Theme
 
 I wrote my own theme, which you can find within the oh-my-zsh folder under themes. Here's a preview:
