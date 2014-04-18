@@ -31,8 +31,7 @@ alias pb="pianobar"
 
 # ls
 alias ls="ls -GF"
-alias ll="ls -Glah"
-alias l="ls -Glh"
+alias l="ls -Glah"
 alias la='ls -GA'
 
 # tree with color

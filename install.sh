@@ -21,6 +21,8 @@ set -e
 
   echo "Installing dotfiles"
   rake install
+  echo "Installing oh-my-zsh"
+  source update-zsh.sh
   echo "Changing shells to ZSH"
   chsh -s /bin/zsh
   echo "Reloading session"
