@@ -12,17 +12,17 @@ set -e
   if [[ $OSTYPE == darwin* ]]; then
     echo "You are running OSX: " $OSTYPE
     echo "Using Homebrew to install packages"
-    brew install vim git tree htop wget curl
+    brew install vim macvim git tree htop wget curl
   else
     echo "You are running Linux: " $OSTYPE
     echo "Using apt-get to install packages...I hope you're using debian based repos."
     sudo apt-get install vim rake git tree zsh htop wget curl
   fi
 
-  echo "Installing dotfiles"
-  rake install
   echo "Installing oh-my-zsh"
   source update-zsh.sh
+  echo "Installing dotfiles"
+  rake install
   echo "Changing shells to ZSH"
   chsh -s /bin/zsh
   echo "Reloading session"
