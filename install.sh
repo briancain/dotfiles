@@ -23,6 +23,8 @@ set -e
   source update-zsh.sh
   echo "Installing dotfiles"
   rake install
+  echo "Installing vim vundles..."
+  vim +BundleInstall +qall
   echo "Changing shells to ZSH"
   chsh -s /bin/zsh
   echo "Reloading session"
