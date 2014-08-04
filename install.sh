@@ -19,6 +19,11 @@ function os_type() {
     export OSDISTRO="debian"
     return;
   }
+  which brew > /dev/null && {
+    echo "homebrew"
+    export OSDISTRO="homebrew"
+    return;
+  }
 }
 
 echo "Setting up Operating System..."
@@ -27,7 +32,7 @@ set -e
 (
   os_type
   echo $DISTRO
-  if [[ $OSTYPE == darwin* ]]; then
+  if [[ $OSDISTRO == "homebrew" ]]; then
     echo "You are running OSX: " $OSTYPE
     echo "Using Homebrew to install packages"
     brew install vim macvim git tree htop wget curl
