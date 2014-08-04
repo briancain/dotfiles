@@ -5,18 +5,43 @@
 # A simple bash script for setting up
 # an Operating System with my dotfiles
 
+set OSDISTRO=''
+
+# Function to determine package manager
+function os_type() {
+  which yum > /dev/null && {
+    echo "yum"
+    export OSDISTRO="centos"
+    return;
+  }
+  which apt-get > /dev/null && {
+    echo "apt-get"
+    export OSDISTRO="debian"
+    return;
+  }
+}
+
 echo "Setting up Operating System..."
 
 set -e
 (
+  os_type
+  echo $DISTRO
   if [[ $OSTYPE == darwin* ]]; then
     echo "You are running OSX: " $OSTYPE
     echo "Using Homebrew to install packages"
     brew install vim macvim git tree htop wget curl
-  else
-    echo "You are running Linux: " $OSTYPE
-    echo "Using apt-get to install packages...I hope you're using debian based repos."
+  elif [[ "$OSDISTRO" == "centos" ]]; then
+    echo "You are running yum."
+    echo "Using apt-get to install packages...."
+    sudo yum install vim rake git tree zsh htop wget curl
+  elif [[ "$OSDISTRO" == "debian" ]]; then
+    echo "You are running apt-get"
+    echo "Using apt-get to install packages...."
     sudo apt-get install vim rake git tree zsh htop wget curl
+  else
+    echo "Could not determine OS. Exiting..."
+    exit 1
   fi
 
   echo "Installing oh-my-zsh"
@@ -30,5 +55,5 @@ set -e
   echo "Reloading session"
   exec zsh
 
-  echo "Operating System setup complete"
+  echo "Operating System setup complete."
 )
