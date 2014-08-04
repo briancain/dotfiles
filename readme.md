@@ -10,7 +10,7 @@ Clone my dotfiles into a directory
 
 Then run my simple install bash script
 
-    $ source install.sh
+    $ ./install.sh
 
 __Note:__
 
