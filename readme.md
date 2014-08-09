@@ -15,7 +15,7 @@ Then run my simple install bash script
 __Note:__
 
 - On OSX, this script assumes you have XCode command line tools installed, and then homebrew installed. It should take care of the rest.
-- If on linux, it assumes you are using apt-get as your package manager.
+- If on linux, it assumes you are either using apt-get or yum as your package manager.
 
 
 All vim bundles will be auto installed once you open vim.
@@ -30,7 +30,7 @@ __WARNING__: This will completely replace your oh-my-zsh folder with the latest 
 
 ## Oh-My-Zsh Custom Theme
 
-I wrote my own theme, which you can find within the oh-my-zsh folder under themes. Here's a preview:
+I wrote my own theme, which you can find within the oh-my-zsh folder under themes. It's basically the Linut Mint shell with some git helper magic. Here's a preview:
 
 ![zsh-theme](http://i.imgur.com/WdGWogr.png)
 
@@ -42,7 +42,6 @@ Originally forked from Dejital, however the only thing left from that is the han
 
 Dotfile installation automation tested on operating systems such as....
 
-- Debian based distros
-- Ubuntu based distros
-- Mac OSX 10.7/10.8/10.9
+- apt-get/yum package managers
+- Mac OSX 10.X with Homebrew
   + ASSUMPTIONS: You need XCode command line tools before installing
