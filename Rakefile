@@ -2,10 +2,22 @@ require 'rake'
 require 'erb'
 
 desc "install the dot files into user's home directory"
-task :install do
+task :install, [:options] do |t,args|
+  install_mutt = false
+  unless args.nil?
+    if args['options'].eql? 'mutt'
+      install_mutt = true
+    end
+  end
+
   replace_all = false
+
   Dir['*'].each do |file|
-    next if %w[Rakefile update-zsh.sh readme.md LICENSE install.sh].include? file
+    unless install_mutt
+      next if %w[Rakefile update-zsh.sh readme.md LICENSE install.sh mutt-colors-solarized mutt muttrc.erb].include? file
+    else
+      next if %w[Rakefile update-zsh.sh readme.md LICENSE install.sh mutt-colors-solarized].include? file
+    end
 
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")

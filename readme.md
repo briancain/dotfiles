@@ -20,6 +20,10 @@ __Note:__
 
 All vim bundles will be auto installed once you open vim.
 
+### mutt
+
+If you are interested in using mutt, these dotfiles will lay down some initial work to get that going for you. If you say no, the installer will go on its way and ignore any mutt related things.
+
 ## Updating oh-my-zsh
 
 When you need to get the latest version of oh-my-zsh, just run the update script from the root directory of the project:
