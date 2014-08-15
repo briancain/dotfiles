@@ -58,11 +58,11 @@ set -e
   elif [[ "$OSPACKMAN" == "yum" ]]; then
     echo "You are running yum."
     echo "Using apt-get to install packages...."
-    sudo yum install ${packages[@]} rake
+    sudo yum install ${packages[@]} rake zsh
   elif [[ "$OSPACKMAN" == "aptget" ]]; then
     echo "You are running apt-get"
     echo "Using apt-get to install packages...."
-    sudo apt-get install ${packages[@]} rake
+    sudo apt-get install ${packages[@]} rake zsh
   else
     echo "Could not determine OS. Exiting..."
     exit 1
