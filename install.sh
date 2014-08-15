@@ -55,11 +55,11 @@ set -e
     echo "You are running homebrew."
     echo "Using Homebrew to install packages..."
     brew install ${packages[@]} macvim
-  elif [[ "$OSPACKMAN" == "centos" ]]; then
+  elif [[ "$OSPACKMAN" == "yum" ]]; then
     echo "You are running yum."
     echo "Using apt-get to install packages...."
     sudo yum install ${packages[@]} rake
-  elif [[ "$OSPACKMAN" == "debian" ]]; then
+  elif [[ "$OSPACKMAN" == "aptget" ]]; then
     echo "You are running apt-get"
     echo "Using apt-get to install packages...."
     sudo apt-get install ${packages[@]} rake
