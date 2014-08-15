@@ -43,6 +43,7 @@ Bundle 'Gundo'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'hunner/vim-puppet'
+Bundle 'amdt/vim-niji'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
