@@ -72,7 +72,7 @@ set -e
   source update-zsh.sh
   echo "Installing dotfiles"
   if [[ $MUTT_INSTALL == "true" ]]; then
-    git clone git@github.com:altercation/mutt-colors-solarized.git
+    git clone https://www.github.com/altercation/mutt-colors-solarized.git
     rake install['mutt']
   else
     rake install
