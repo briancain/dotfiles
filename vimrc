@@ -83,6 +83,9 @@ filetype plugin indent on
 " Gundo mapping
 nnoremap <silent> <C-U> :GundoToggle<CR>
 
+" Airline tabs
+let g:airline#extensions#tabline#enabled = 1
+
 "-----------------------------------------------------------------------------
 " Encoding and general usability
 "-----------------------------------------------------------------------------
