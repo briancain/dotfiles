@@ -28,7 +28,7 @@ If you are interested in using mutt, these dotfiles will lay down some initial w
 
 When you need to get the latest version of oh-my-zsh, just run the update script from the root directory of the project:
 
-    $ source update-zsh.sh
+    $ ./update-zsh.sh
 
 __WARNING__: This will completely replace your oh-my-zsh folder with the latest version from Github.
 
