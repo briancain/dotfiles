@@ -1,9 +1,10 @@
 " set the height of my window:
+
+let &t_Co=256
 set lines=40
 
 " set the width:
 set columns=82
-  
 " Solarized color scheme for vim and gvim
 set background=light
 "colorscheme solarized

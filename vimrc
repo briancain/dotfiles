@@ -5,6 +5,7 @@
 "-----------------------------------------------------------------------------
 
 set nocompatible
+let &t_Co=256
 
 "-----------------------------------------------------------------------------
 "
@@ -51,6 +52,9 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 "
 Bundle 'kchmck/vim-coffee-script'
+" Airline
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
 " Installing plugins the first time
 " If exists, skip
 if has_vundle == 0
@@ -78,43 +82,6 @@ filetype plugin indent on
 
 " Gundo mapping
 nnoremap <silent> <C-U> :GundoToggle<CR>
-
-"-----------------------------------------------------------------------------
-" Better Bottom Bar
-"-----------------------------------------------------------------------------
-
-" Nice statusbar
-" https://github.com/hunner/hunners-homedir-configs/blob/master/.vimrc
-set laststatus=2
-set statusline=
-set statusline+=%0*%-3.3n%0*\                " buffer number
-set statusline+=%f\                          " file name
-if has("eval")
-  let g:scm_cache = {}
-  fun! ScmInfo()
-    let l:key = getcwd()
-    if ! has_key(g:scm_cache, l:key)
-      if (isdirectory(getcwd() . "/.git"))
-        let g:scm_cache[l:key] = "[" . substitute(readfile(getcwd() . "/.git/HEAD", "", 1)[0],
-              \ "^.*/", "", "") . "] "
-      else
-        let g:scm_cache[l:key] = ""
-      endif
-    endif
-    return g:scm_cache[l:key]
-  endfun
-  set statusline+=%{ScmInfo()}               " scm info
-endif
-set statusline+=%h%1*%m%r%w%0*               " flags
-set statusline+=\[%{strlen(&ft)?&ft:'none'}, " filetype
-set statusline+=%{&encoding},                " encoding
-set statusline+=%{&fileformat}]              " file format
-if filereadable(expand("$VIM/vimfiles/plugin/vimbuddy.vim"))
-  set statusline+=\ %{VimBuddy()}          " vim buddy
-endif
-set statusline+=%=                           " right align
-set statusline+=%0*0x%-8B\                   " current char
-set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 "-----------------------------------------------------------------------------
 " Encoding and general usability
@@ -234,7 +201,7 @@ endfunction
 " Keymap stuff
 "-----------------------------------------------------------------------------
 
-" noremap <Up> gk 
+" noremap <Up> gk
 " noremap <Down> gj
 
 " Toggle text wrapping with \w {{{
@@ -277,7 +244,7 @@ noremap  <buffer> <silent> $ g$
 set mouse=a
 
 " Keymappings for :e
-map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR> 
+map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR>
 map <leader>es :sp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
