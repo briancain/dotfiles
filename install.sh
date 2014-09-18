@@ -54,7 +54,7 @@ set -e
   if [[ $OSPACKMAN == "homebrew" ]]; then
     echo "You are running homebrew."
     echo "Using Homebrew to install packages..."
-    brew install ${packages[@]} macvim
+    brew install ${packages[@]} macvim the_silver_searcher
   elif [[ "$OSPACKMAN" == "yum" ]]; then
     echo "You are running yum."
     echo "Using apt-get to install packages...."
