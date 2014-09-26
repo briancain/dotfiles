@@ -39,8 +39,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " Additional Bundles go here"
 Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle 'Gundo'
+Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'hunner/vim-puppet'
@@ -63,19 +63,8 @@ if has_vundle == 0
     :BundleInstall
 endif
 
-" Shortcuts for FF
-if v:version >= 703
-    nmap <silent> st     :FufFileWithCurrentBufferDir<CR>
-    nmap <silent> sT     :FufFileWithFullCwd<CR>
-    nmap <silent> s<C-t> :FufFile<CR>
-    nmap <silent> sn     :FufCoverageFileChange<CR>
-    nmap <silent> sN     :FufCoverageFileChange<CR>
-    nmap <silent> sd     :FufDirWithCurrentBufferDir<CR>
-    nmap <silent> sD     :FufDirWithFullCwd<CR>
-    nmap <silent> s<C-d> :FufDir<CR>
-    nmap <silent> sb     :FufMruFile<CR>
-    nmap <silent> sB     :FufMruFileInCwd<CR>
-endif
+" Shortcuts for CtrlP
+let g:ctrlp_map = '<c-p>'
 
 syntax enable
 filetype plugin indent on
