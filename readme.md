@@ -17,9 +17,6 @@ __Note:__
 - On OSX, this script assumes you have XCode command line tools installed, and then homebrew installed. It should take care of the rest.
 - If on linux, it assumes you are either using apt-get or yum as your package manager.
 
-
-All vim bundles will be auto installed once you open vim.
-
 ### mutt
 
 If you are interested in using mutt, these dotfiles will lay down some initial work to get that going for you. If you say no, the installer will go on its way and ignore any mutt related things.
@@ -46,6 +43,6 @@ Originally forked from Dejital, however the only thing left from that is the han
 
 Dotfile installation automation tested on operating systems such as....
 
-- apt-get/yum package managers
+- apt-get/yum package managers (that have ruby installed)
 - Mac OSX 10.X with Homebrew
   + ASSUMPTIONS: You need XCode command line tools before installing
