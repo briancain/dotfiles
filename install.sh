@@ -36,6 +36,20 @@ function setup_mutt() {
   fi
 }
 
+# symlink a file
+# arguments: filename
+function link_file(){
+  echo "linking ~/.$1"
+  ln -s "$PWD/$1" "$HOME/.$1"
+}
+
+# replace file
+# arguments: filename
+function replace_file() {
+  rm -rf "$HOME/.$1"
+  link_file $1
+}
+
 echo "Setting up Operating System..."
 
 set -e
