@@ -54,14 +54,19 @@ set -e
   if [[ $OSPACKMAN == "homebrew" ]]; then
     echo "You are running homebrew."
     echo "Using Homebrew to install packages..."
-    brew install ${packages[@]} macvim the_silver_searcher
+    brew update && brew upgrade
+    declare -a macpackages=('findutils' 'bash' 'macvim' 'the_silver_searcher')
+    brew install ${packages[@]} ${macpackages[@]}
+    brew cleanup
   elif [[ "$OSPACKMAN" == "yum" ]]; then
     echo "You are running yum."
     echo "Using apt-get to install packages...."
+    sudo yum update
     sudo yum install ${packages[@]} rake zsh
   elif [[ "$OSPACKMAN" == "aptget" ]]; then
     echo "You are running apt-get"
     echo "Using apt-get to install packages...."
+    sudo apt-get update && sudo apt-get upgrade
     sudo apt-get install ${packages[@]} rake zsh
   else
     echo "Could not determine OS. Exiting..."
@@ -81,8 +86,8 @@ set -e
   vim +BundleInstall +qall
   echo "Changing shells to ZSH"
   chsh -s /bin/zsh
-  echo "Reloading session"
-  exec zsh
 
   echo "Operating System setup complete."
+  echo "Reloading session"
+  exec zsh
 )

@@ -12,6 +12,6 @@ echo 'Cloning updated version...'
 git clone https://www.github.com/robbyrussell/oh-my-zsh.git
 
 echo 'Moving theme into oh-my-zsh'
-cp zsh-theme/brian.zsh-theme oh-my-zsh/themes
+cp zsh-theme/* oh-my-zsh/themes/
 
 echo 'Complete Update!'
