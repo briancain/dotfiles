@@ -5,7 +5,7 @@
 # A simple bash script for setting up
 # an Operating System with my dotfiles
 
-set OSPACKMAN=''
+OSPACKMAN=''
 
 # Function to determine package manager
 function os_type() {
@@ -47,7 +47,7 @@ function link_file(){
 # arguments: filename
 function replace_file() {
   rm -rf "$HOME/.$1"
-  link_file $1
+  link_file "$1"
 }
 
 echo "Setting up Operating System..."
@@ -70,18 +70,18 @@ set -e
     echo "Using Homebrew to install packages..."
     brew update && brew upgrade
     declare -a macpackages=('findutils' 'bash' 'macvim' 'the_silver_searcher')
-    brew install ${packages[@]} ${macpackages[@]}
+    brew install "${packages[@]}" "${macpackages[@]}"
     brew cleanup
   elif [[ "$OSPACKMAN" == "yum" ]]; then
     echo "You are running yum."
     echo "Using apt-get to install packages...."
     sudo yum update
-    sudo yum install ${packages[@]} rake zsh
+    sudo yum install "${packages[@]}" rake zsh
   elif [[ "$OSPACKMAN" == "aptget" ]]; then
     echo "You are running apt-get"
     echo "Using apt-get to install packages...."
     sudo apt-get update && sudo apt-get upgrade
-    sudo apt-get install ${packages[@]} rake zsh
+    sudo apt-get install "${packages[@]}" rake zsh
   else
     echo "Could not determine OS. Exiting..."
     exit 1
