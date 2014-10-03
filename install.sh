@@ -50,6 +50,11 @@ function replace_file() {
   link_file "$1"
 }
 
+# install files to $HOME
+function install_dotfiles() {
+  echo "Fix me"
+}
+
 echo "Setting up Operating System..."
 
 set -e
