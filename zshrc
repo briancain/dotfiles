@@ -16,6 +16,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="brian"
 
 # ssh
+alias matcha="ssh -t brian@briancain.net"
 alias datviper="ssh bccain@viper.cis.ksu.edu"
 alias datcg="ssh bccain@cougar.cis.ksu.edu"
 alias ksuX="ssh -X bccain@cislinux.cis.ksu.edu"
@@ -24,7 +25,7 @@ alias ksuX="ssh -X bccain@cislinux.cis.ksu.edu"
 alias rake='noglob rake'
 
 # IRC connection
-alias goirc="ssh -t bccain@viper.cis.ksu.edu screen -raAd"
+alias goirc="ssh -t brian@briancain.net screen -raAd"
 
 # Reload ZSH Config
 alias reload='. ~/.zshrc'
