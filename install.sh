@@ -5,8 +5,6 @@
 # A simple bash script for setting up
 # an Operating System with my dotfiles
 
-OSPACKMAN=''
-
 # Function to determine package manager
 function os_type() {
   which yum > /dev/null && {
