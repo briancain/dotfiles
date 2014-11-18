@@ -74,7 +74,7 @@ set -e
     echo "You are running homebrew."
     echo "Using Homebrew to install packages..."
     brew update && brew upgrade
-    declare -a macpackages=('findutils' 'bash' 'macvim' 'the_silver_searcher')
+    declare -a macpackages=('findutils' 'macvim' 'the_silver_searcher')
     brew install "${packages[@]}" "${macpackages[@]}"
     brew cleanup
   elif [[ "$OSPACKMAN" == "yum" ]]; then
