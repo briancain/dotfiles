@@ -24,23 +24,55 @@ function os_type() {
   }
 }
 
+function symlink_files() {
+  for f in $(ls -d *); do
+    if [[ $f =~ 'LICENSE' ]]; then
+      echo "Skipping $f ..."
+    elif [[ $f =~ 'README.md' ]]; then
+      echo "Skipping $f ..."
+    elif [[ $f =~ 'install.sh' ]]; then
+      echo "Skipping $f ..."
+    elif [[ $f =~ 'update-zsh.sh' ]]; then
+      echo "Skipping $f ..."
+    else
+        link_file $f
+    fi
+  done
+}
+
 # symlink a file
 # arguments: filename
 function link_file(){
   echo "linking ~/.$1"
-  ln -s "$PWD/$1" "$HOME/.$1"
+  if ! $(ln -s "$PWD/$1" "$HOME/.$1");  then
+    echo "Replace file '~/.$1'?"
+    read -p "[Y/n]?: " Q_REPLACE_FILE
+    if [[ $Q_REPLACE_FILE != 'n' ]]; then
+      replace_file $1
+    fi
+  fi
 }
 
 # replace file
 # arguments: filename
 function replace_file() {
-  rm -rf "$HOME/.$1"
-  link_file "$1"
+  echo "replacing ~/.$1"
+  ln -sf "$PWD/$1" "$HOME/.$1"
 }
 
-# install files to $HOME
-function install_dotfiles() {
-  echo "Fix me"
+function setup_git() {
+  echo 'Setting up git config...'
+  read -p 'Enter Github username: ' GIT_USER
+  git config --global user.name "$GIT_USER"
+  read -p 'Enter email: ' GIT_EMAIL
+  git config --global user.email $GIT_EMAIL
+  git config --global core.editor vim
+  git config --global color.ui true
+  git config --global color.diff auto
+  git config --global color.status auto
+  git config --global color.branch auto
+  # extras
+  git config --global alias.lg log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset' --abbrev-commit
 }
 
 echo "Setting up Operating System..."
@@ -55,20 +87,19 @@ set -e
   if [[ $OSPACKMAN == "homebrew" ]]; then
     echo "You are running homebrew."
     echo "Using Homebrew to install packages..."
-    brew update && brew upgrade
+    brew update
     declare -a macpackages=('findutils' 'macvim' 'the_silver_searcher')
     brew install "${packages[@]}" "${macpackages[@]}"
-    brew cleanup
   elif [[ "$OSPACKMAN" == "yum" ]]; then
     echo "You are running yum."
     echo "Using apt-get to install packages...."
     sudo yum update
-    sudo yum install "${packages[@]}" rake zsh
+    sudo yum install "${packages[@]}" zsh
   elif [[ "$OSPACKMAN" == "aptget" ]]; then
     echo "You are running apt-get"
     echo "Using apt-get to install packages...."
-    sudo apt-get update && sudo apt-get upgrade
-    sudo apt-get install "${packages[@]}" rake zsh
+    sudo apt-get update
+    sudo apt-get install "${packages[@]}" zsh
   else
     echo "Could not determine OS. Exiting..."
     exit 1
@@ -77,7 +108,7 @@ set -e
   echo "Installing oh-my-zsh"
   source update-zsh.sh
   echo "Installing dotfiles"
-  rake install
+  symlink_files
   echo "Installing vim vundles..."
   vim +BundleInstall +qall
   echo "Changing shells to ZSH"
