@@ -6,7 +6,7 @@
 # an Operating System with my dotfiles
 
 # Function to determine package manager
-function os_type() {
+function determine_package_manager() {
   which yum > /dev/null && {
     echo "yum"
     export OSPACKMAN="yum"
@@ -24,6 +24,8 @@ function os_type() {
   }
 }
 
+# Adds a symbolic link to files in ~/.dotfiles
+# to your home directory.
 function symlink_files() {
   for f in $(ls -d *); do
     if [[ $f =~ 'LICENSE' ]]; then
@@ -79,7 +81,7 @@ echo "Setting up Operating System..."
 
 set -e
 (
-  os_type
+  determine_package_manager
 
   # general package array
   declare -a packages=('vim' 'git' 'tree' 'htop' 'wget' 'curl')
