@@ -36,6 +36,8 @@ function symlink_files() {
       echo "Skipping $f ..."
     elif [[ $f =~ 'update-zsh.sh' ]]; then
       echo "Skipping $f ..."
+    elif [[ $f =~ 'zsh-theme' ]]; then
+      echo "Skipping $f ..."
     else
         link_file $f
     fi
