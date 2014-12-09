@@ -29,10 +29,6 @@ I wrote my own theme, which you can find within the oh-my-zsh folder under theme
 
 ![zsh-theme](http://i.imgur.com/WdGWogr.png)
 
-## Old Dotfiles
-
-Originally forked from Dejital, however the only thing left from that is the handy Rakefile to link rcs to your homedir. Very very useful! That repo is now moved to `old_dotfiles` since it really isn't a fork anymore.
-
 ### Works great on....
 
 Dotfile installation automation tested on operating systems such as....
