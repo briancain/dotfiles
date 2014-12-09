@@ -62,3 +62,20 @@ bind k:shift;ctrl focus up
 bind j:shift;ctrl focus down
 bind k:shift;ctrl;alt focus above
 bind j:shift;ctrl;alt focus behind
+
+# Layout's directive - layout name 'app name':OPTIONS operations
+
+# Creates the aliases needed for this example
+#alias 0-full move screenOriginX;screenOriginY screenSizeX;screenSizeY 0
+#alias 1-full move screenOriginX;screenOriginY screenSizeX;screenSizeY 1
+#
+## oneDisplayLayout
+#layout oneDisplayLayout 'iTerm':MAIN_FIRST #{lefthalf}
+#layout oneDisplayLayout 'Firefox':REPEAT #{righthalf}
+## threeDisplayLayout
+#layout threeDisplayLayout 'iTerm':MAIN_FIRST #{0-full}
+#layout threeDisplayLayout 'HipChat':REPEAT #{2-full}
+#layout threeDisplayLayout 'Chrome':REPEAT #{1-lefthalf}
+#
+## default threeScreenLayout count:3
+#default oneScreenLayout count:1
