@@ -27,16 +27,10 @@ function determine_package_manager() {
 # Adds a symbolic link to files in ~/.dotfiles
 # to your home directory.
 function symlink_files() {
+  ignoredfiles=(LICENSE README.md install.sh update-zsh.sh zsh-theme)
+
   for f in $(ls -d *); do
-    if [[ $f =~ 'LICENSE' ]]; then
-      echo "Skipping $f ..."
-    elif [[ $f =~ 'README.md' ]]; then
-      echo "Skipping $f ..."
-    elif [[ $f =~ 'install.sh' ]]; then
-      echo "Skipping $f ..."
-    elif [[ $f =~ 'update-zsh.sh' ]]; then
-      echo "Skipping $f ..."
-    elif [[ $f =~ 'zsh-theme' ]]; then
+    if [[ ${ignoredfiles[@]} =~ $f ]]; then
       echo "Skipping $f ..."
     else
         link_file $f
