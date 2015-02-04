@@ -16,7 +16,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="brian"
 
 # ssh
-alias matcha="ssh -t brian@briancain.net"
+alias datbc="ssh -t brian@briancain.net"
 alias datviper="ssh bccain@viper.cis.ksu.edu"
 alias datcg="ssh bccain@cougar.cis.ksu.edu"
 alias ksuX="ssh -X bccain@cislinux.cis.ksu.edu"
