@@ -37,14 +37,14 @@ bind j:ctrl;alt resize +0 -1% bottom-right
 bind return:shift;cmd ${full}
 bind k:shift;cmd ${tophalf}
 bind j:shift;cmd ${bottomhalf}
-bind h:shift;cmd ${lefthalf} 0
-bind h:shift;cmd;ctrl ${lefthalf} 1
+bind h:shift;cmd ${lefthalf}
+bind h:shift;cmd;ctrl ${lefthalf}
 bind h:shift;alt;cmd ${leftthird}
 bind i:shift;alt;cmd ${middlethird}
 bind b:shift;cmd ${bottomleft}
 bind y:shift;cmd ${topleft}
-bind l:shift;cmd ${righthalf} 0
-bind l:shift;cmd;ctrl ${righthalf} 1
+bind l:shift;cmd ${righthalf}
+bind l:shift;cmd;ctrl ${righthalf}
 bind l:shift;alt;cmd ${rightthird}
 bind .:shift;cmd ${bottomright}
 bind p:shift;cmd ${topright}
