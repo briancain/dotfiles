@@ -70,7 +70,7 @@ function setup_git() {
   git config --global color.status auto
   git config --global color.branch auto
   # extras
-  git config --global alias.lg log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset' --abbrev-commit
+  git config --global alias.lg log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
 }
 
 echo "Setting up Operating System..."
