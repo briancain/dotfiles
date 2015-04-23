@@ -112,6 +112,9 @@ set -e
   echo "Changing shells to ZSH"
   chsh -s /bin/zsh
 
+  # clean up env vars
+  unset OSPACKMAN
+
   echo "Operating System setup complete."
   echo "Reloading session"
   exec zsh
