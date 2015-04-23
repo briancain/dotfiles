@@ -21,7 +21,7 @@ __Note:__
 
 When you need to get the latest version of oh-my-zsh, just run the update script from the root directory of the project:
 
-    $ ./update-zsh.sh
+    $ ./get-omzsh.sh
 
 ## Oh-My-Zsh Custom Theme
 

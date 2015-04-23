@@ -27,7 +27,7 @@ function determine_package_manager() {
 # Adds a symbolic link to files in ~/.dotfiles
 # to your home directory.
 function symlink_files() {
-  ignoredfiles=(LICENSE readme.md install.sh update-zsh.sh zsh-theme)
+  ignoredfiles=(LICENSE readme.md install.sh get-omzsh.sh zsh-theme)
 
   for f in $(ls -d *); do
     if [[ ${ignoredfiles[@]} =~ $f ]]; then
@@ -104,7 +104,7 @@ set -e
   fi
 
   echo "Installing oh-my-zsh"
-  source update-zsh.sh
+  source get-omzsh.sh
   echo "Installing dotfiles"
   symlink_files
   echo "Installing vim vundles..."
