@@ -44,7 +44,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'hunner/vim-puppet'
-Bundle 'amdt/vim-niji'
+Bundle 'luochen1990/rainbow'
 Bundle 'vim-scripts/paredit.vim'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -63,6 +63,9 @@ if has_vundle == 0
     echo ""
     :BundleInstall
 endif
+
+" Rainbow parens
+let g:rainbow_active = 1
 
 " Shortcuts for CtrlP
 let g:ctrlp_map = '<c-p>'

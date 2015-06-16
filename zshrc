@@ -25,7 +25,7 @@ alias ksuX="ssh -X bccain@cislinux.cis.ksu.edu"
 alias rake='noglob rake'
 
 # IRC connection
-alias goirc="ssh -t brian@briancain.net screen -raAd"
+alias goirc="ssh -t brian@www.briancain.net screen -raAd"
 
 # Reload ZSH Config
 alias reload='. ~/.zshrc'
