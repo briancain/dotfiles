@@ -44,8 +44,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'hunner/vim-puppet'
-Bundle 'luochen1990/rainbow'
+Bundle 'vim-scripts/vim-niji'
 Bundle 'vim-scripts/paredit.vim'
+Bundle 'tpope/vim-fireplace'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
