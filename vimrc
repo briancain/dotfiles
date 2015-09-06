@@ -308,24 +308,3 @@ filetype indent on
 " " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-
-"-----------------------------------------------------------------------------
-" Latex-Box
-"-----------------------------------------------------------------------------
-
-" These don't work (for me, at least)
-" Use \la instead, from ftplugin/tex.vim
-" let g:LatexBox_viewer = 'skim'
-"let g:LatexBox_latexmk_options = '-pvc'
-
-"-----------------------------------------------------------------------------
-" utl.vim
-" Plugin for handling hyperlinks
-"-----------------------------------------------------------------------------
-
-" Set how Vim opens hyperlinks
-let g:utl_cfg_hdl_scm_http_system = 'silent !open "%u"'
-
-" Open hyperlinks with \fo
-" Think "Firefox-open"
-noremap <leader>fo :Utl<CR>
