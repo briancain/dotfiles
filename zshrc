@@ -17,9 +17,6 @@ ZSH_THEME="brian"
 
 # ssh
 alias datbc="ssh -t brian@briancain.net"
-alias datviper="ssh bccain@viper.cis.ksu.edu"
-alias datcg="ssh bccain@cougar.cis.ksu.edu"
-alias ksuX="ssh -X bccain@cislinux.cis.ksu.edu"
 
 # rake
 alias rake='noglob rake'
@@ -60,9 +57,6 @@ alias vf='vim -f'
 alias lpdf='pdflatex'
 alias lrtf='latex2rtf'
 
-# Word is for opening RTF files quickly in Microsoft Word
-alias word='open -a "Microsoft Word"'
-
 # git
 alias gl='git pull'
 alias glo='git pull origin master'
@@ -86,16 +80,6 @@ function t() {
   fi
 }
 alias n="t ls +next"
-
-# rails
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest -rails'
-alias tlog='tail -f log/development.log'
-alias scaffold='script/generate nifty_scaffold'
-alias migrate='rake db:migrate db:test:clone'
-alias rst='touch tmp/restart.txt'
 
 # commands starting with % for pasting from web
 alias %=' '
