@@ -2,6 +2,8 @@
 
 # Brian Cain
 #
+# WHAT'S THIS? A BASH FILE WITH FUNCTIONS?
+#
 # A simple bash script for setting up
 # an Operating System with my dotfiles
 
