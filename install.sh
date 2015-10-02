@@ -7,7 +7,6 @@
 # A simple bash script for setting up
 # an Operating System with my dotfiles
 
-# Function to determine package manager
 function determine_package_manager() {
   which yum > /dev/null && {
     echo "yum"
