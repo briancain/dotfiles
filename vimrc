@@ -43,7 +43,8 @@ Bundle 'Gundo'
 Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
-Bundle 'hunner/vim-puppet'
+Bundle 'rodjek/vim-puppet'
+Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/vim-niji'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'tpope/vim-fireplace'
@@ -52,8 +53,6 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
-"
-Bundle 'kchmck/vim-coffee-script'
 " Airline
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
