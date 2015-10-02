@@ -91,7 +91,7 @@ set -e
     brew install "${packages[@]}" "${macpackages[@]}"
   elif [[ "$OSPACKMAN" == "yum" ]]; then
     echo "You are running yum."
-    echo "Using apt-get to install packages...."
+    echo "Using yum to install packages...."
     sudo yum update
     sudo yum install "${packages[@]}" zsh
   elif [[ "$OSPACKMAN" == "aptget" ]]; then
