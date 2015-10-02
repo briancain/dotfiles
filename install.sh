@@ -34,7 +34,7 @@ function symlink_files() {
     if [[ ${ignoredfiles[@]} =~ $f ]]; then
       echo "Skipping $f ..."
     else
-        link_file $f
+      link_file $f
     fi
   done
 }
