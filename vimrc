@@ -6,7 +6,6 @@
 
 set nocompatible
 let &t_Co=256
-colorscheme gruvbox
 
 "-----------------------------------------------------------------------------
 "
@@ -90,6 +89,11 @@ set splitright
 
 set modeline
 set ls=2
+
+colorscheme gruvbox
+
+set cursorline
+set showmatch
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
 set encoding=utf-8
