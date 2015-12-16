@@ -35,8 +35,8 @@ alias ls="ls -GF"
 alias l="ls -Glah"
 alias la='ls -GA'
 
-# tree with color
-alias tree="tree -C"
+# tree with color and hidden files
+alias tree="tree -Ca"
 
 # grc overrides for ls
 # Made possible through contributions from generous benefactors like
