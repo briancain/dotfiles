@@ -57,20 +57,6 @@ alias vf='vim -f'
 alias lpdf='pdflatex'
 alias lrtf='latex2rtf'
 
-# git
-alias gl='git pull'
-alias glo='git pull origin master'
-alias gp='git push'
-alias gpo='git push origin master'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
-alias go='git checkout'
-alias gb='git branch'
-alias gs='git status'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
-
 alias n="t ls +next"
 
 # commands starting with % for pasting from web
