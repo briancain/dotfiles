@@ -47,7 +47,7 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/vim-niji'
 Bundle 'vim-scripts/paredit.vim'
-Bundle 'tpope/vim-fireplace'
+Plugin 'whatyouhide/vim-lengthmatters'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
