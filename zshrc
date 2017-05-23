@@ -16,7 +16,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="brian"
 
 # ssh
-alias datbc="ssh -t brian@briancain.net"
+alias datbc="ssh -t brian@www.briancain.net"
 
 # rake [] fix for zsh
 alias rake='noglob rake'
@@ -61,6 +61,9 @@ alias n="t ls +next"
 
 # commands starting with % for pasting from web
 alias %=' '
+
+# ruby stuff
+alias be='bundle exec'
 
 # Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
