@@ -43,10 +43,7 @@ Bundle 'Gundo'
 Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
-Bundle 'rodjek/vim-puppet'
 Bundle 'godlygeek/tabular'
-Bundle 'vim-scripts/vim-niji'
-Bundle 'vim-scripts/paredit.vim'
 Plugin 'whatyouhide/vim-lengthmatters'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -56,6 +53,10 @@ Bundle "honza/vim-snippets"
 " Airline
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
+" Old plugins for future use?
+"Bundle 'vim-scripts/vim-niji'
+"Bundle 'vim-scripts/paredit.vim'
+"Bundle 'rodjek/vim-puppet'
 " Installing plugins the first time
 " If exists, skip
 if has_vundle == 0
