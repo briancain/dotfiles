@@ -7,6 +7,10 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# Load zsh functions
+fpath=( ~/.zfunc $fpath )
+autoload firefoxd
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
