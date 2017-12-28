@@ -31,9 +31,6 @@ alias goirc="ssh -t brian@www.briancain.net screen -raAd"
 # Reload ZSH Config
 alias reload='. ~/.zshrc'
 
-# pianobar
-alias pb="pianobar"
-
 # ls
 alias ls="ls -GF"
 alias l="ls -Glah"
@@ -41,17 +38,6 @@ alias la='ls -GA'
 
 # tree with color and hidden files
 alias tree="tree -Ca"
-
-# grc overrides for ls
-# Made possible through contributions from generous benefactors like
-# `brew install coreutils`
-if $(gls &>/dev/null)
-then
-  alias ls="gls -F --color"
-  alias ll="gls -lAh --color"
-  alias l="gls -lh --color"
-  alias la='gls -A --color'
-fi
 
 # VIM
 alias v='vim'
