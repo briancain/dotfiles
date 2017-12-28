@@ -10,8 +10,6 @@ sudo docker run -d \
          -v "${HOME}/.firefox/cache:/root/.cache/mozilla" \
          -v "${HOME}/.firefox/mozilla:/root/.mozilla" \
          -v "${HOME}/Downloads:/root/Downloads" \
-         -v "${HOME}/Pictures:/root/Pictures" \
-         -v "${HOME}/Torrents:/root/Torrents" \
          -e "DISPLAY=unix${DISPLAY}" \
          -e GDK_SCALE \
          -e GDK_DPI_SCALE \
