@@ -13,9 +13,9 @@ function determine_package_manager() {
     export OSPACKMAN="yum"
     return;
   }
-  which apt-get > /dev/null && {
-    echo "apt-get"
-    export OSPACKMAN="aptget"
+  which apt > /dev/null && {
+    echo "apt"
+    export OSPACKMAN="apt"
     return;
   }
   which brew > /dev/null && {
@@ -94,11 +94,11 @@ set -e
     echo "Using yum to install packages...."
     sudo yum update
     sudo yum install "${packages[@]}" zsh
-  elif [[ "$OSPACKMAN" == "aptget" ]]; then
-    echo "You are running apt-get"
-    echo "Using apt-get to install packages...."
-    sudo apt-get update
-    sudo apt-get install "${packages[@]}" zsh
+  elif [[ "$OSPACKMAN" == "apt" ]]; then
+    echo "You are running apt"
+    echo "Using apt to install packages...."
+    sudo apt update
+    sudo apt install "${packages[@]}" zsh
   else
     echo "Could not determine OS. Exiting..."
     exit 1
