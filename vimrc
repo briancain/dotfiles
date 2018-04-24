@@ -65,9 +65,6 @@ if has_vundle == 0
     :BundleInstall
 endif
 
-" Rainbow parens
-let g:rainbow_active = 1
-
 " Shortcuts for CtrlP
 let g:ctrlp_map = '<c-p>'
 " The Silver Searcher
