@@ -3,7 +3,7 @@ export GPG_TTY=$(tty)
 export PATH="$HOME/go/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/lib/go-1.9/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
