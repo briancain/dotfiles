@@ -16,6 +16,9 @@ ZSH=$HOME/.oh-my-zsh
 # My custom theme
 ZSH_THEME="brian"
 
+# pbcopy but for ubuntu
+alias pbcopy="xclip -selection clipboard"
+
 # ssh
 alias datbc="ssh -t brian@www.briancain.net"
 
