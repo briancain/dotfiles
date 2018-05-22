@@ -37,7 +37,7 @@ alias l="ls -Glah"
 alias la='ls -GA'
 
 # tree with color and hidden files
-alias tree="tree -Ca"
+alias tree="tree -C -a"
 
 # VIM
 alias v='vim'
