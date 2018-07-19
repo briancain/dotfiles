@@ -99,7 +99,6 @@ set splitright
 set modeline
 set ls=2
 
-colorscheme gruvbox
 
 set cursorline
 set showmatch

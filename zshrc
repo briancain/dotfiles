@@ -1,12 +1,16 @@
+# ENV VARS
 export EDITOR='vim'
 export GPG_TTY=$(tty)
 export PATH="$HOME/go/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+# ENV VARS
 
 # Work stuff
 export VAGRANT_INSTALLER_ENV=1
+# vmware vagrant plugin helper
+alias vmware="sudo ./go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/lib/go-1.9/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -21,8 +25,8 @@ ZSH_THEME="brian"
 
 # Aliases
 
-# vmware vagrant plugin helper
-alias vmware="sudo ./go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api"
+# pbcopy but for ubuntu
+alias pbcopy="xclip -selection clipboard"
 
 # ssh
 alias datbc="ssh -t brian@www.briancain.net"
