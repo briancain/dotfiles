@@ -111,15 +111,11 @@ set -e
   echo "Installing vim vundles..."
   vim +BundleInstall +qall
 
-  #echo "Setting up colors..."
-  #mkdir ~/.vim/colors
-  #cp ~/.dotfiles/vim/bundle/vim-colorschemes/colors ~/.vim/colors
+  echo "Setting up colors..."
+  ln -s ~/.dotfiles/vim/bundle/vim-colorschemes/colors ~/.vim/colors
 
   echo "Changing shells to ZSH"
   chsh -s /bin/zsh
-
-  # clean up env vars
-  unset OSPACKMAN
 
   echo "Operating System setup complete."
   echo "Reloading session"
