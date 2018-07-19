@@ -2,6 +2,9 @@ export EDITOR='vim'
 export GPG_TTY=$(tty)
 export PATH="$HOME/go/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 
+# Work stuff
+export VAGRANT_INSTALLER_ENV=1
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
@@ -15,6 +18,11 @@ ZSH=$HOME/.oh-my-zsh
 
 # My custom theme
 ZSH_THEME="brian"
+
+# Aliases
+
+# vmware vagrant plugin helper
+alias vmware="sudo ./go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api"
 
 # ssh
 alias datbc="ssh -t brian@www.briancain.net"
