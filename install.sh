@@ -13,14 +13,14 @@ function determine_package_manager() {
     export OSPACKMAN="yum"
     return;
   }
-  which apt > /dev/null && {
-    echo "apt"
-    export OSPACKMAN="apt"
-    return;
-  }
   which brew > /dev/null && {
     echo "homebrew"
     export OSPACKMAN="homebrew"
+    return;
+  }
+  which apt > /dev/null && {
+    echo "apt"
+    export OSPACKMAN="apt"
     return;
   }
 }
