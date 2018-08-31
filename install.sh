@@ -97,8 +97,8 @@ set -e
   elif [[ "$OSPACKMAN" == "apt" ]]; then
     echo "You are running apt"
     echo "Using apt to install packages...."
-    sudo apt update
-    sudo apt install "${packages[@]}" zsh
+    sudo apt-get update
+    sudo apt-get install "${packages[@]}" zsh
   else
     echo "Could not determine OS. Exiting..."
     exit 1
