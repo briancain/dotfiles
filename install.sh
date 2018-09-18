@@ -5,7 +5,7 @@
 # WHAT'S THIS? A BASH FILE WITH FUNCTIONS?
 #
 # A simple bash script for setting up
-# an Operating System with my dotfiles
+# an Machine with my dotfiles
 
 function determine_package_manager() {
   which yum > /dev/null && {
@@ -74,7 +74,7 @@ function setup_git() {
   git config --global alias.lg log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
 }
 
-echo "Setting up Operating System..."
+echo "Setting up Machine..."
 
 set -e
 (
@@ -100,7 +100,7 @@ set -e
     sudo apt-get update
     sudo apt-get install "${packages[@]}" zsh
   else
-    echo "Could not determine OS. Exiting..."
+    echo "Machine not supported. Exiting..."
     exit 1
   fi
 
@@ -117,7 +117,7 @@ set -e
   echo "Changing shells to ZSH"
   chsh -s /bin/zsh
 
-  echo "Operating System setup complete."
+  echo "Machine setup complete."
   echo "Reloading session"
   exec zsh
 )
