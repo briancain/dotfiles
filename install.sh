@@ -74,10 +74,24 @@ function setup_git() {
   git config --global alias.lg log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
 }
 
-echo "Setting up Machine..."
+cat << EOF
+
+ _.........._
+| | brians | |
+| |dotfiles| |
+| |        | |
+| |        | |
+| |________| |
+|   ______   |
+|  |    | |  |
+|__|____|_|__|
+
+EOF
 
 set -e
 (
+  echo "Setting up Machine..."
+
   determine_package_manager
 
   # general package array
