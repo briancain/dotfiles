@@ -1,7 +1,7 @@
 # ENV VARS
 export EDITOR='vim'
 export GPG_TTY=$(tty)
-export PATH="$HOME/go/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/bin:$HOME/.bin:/usr/lib/go-1.10/bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 # ENV VARS
 
 # Work stuff
