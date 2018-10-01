@@ -12,8 +12,9 @@ function vmware () {
 }
 
 function killvmware () {
-  sudo kill -9 $(ps aux | grep -v sudo | grep -v grep | grep 'vagrant-vmware-utility api' | awk '{print $2}')
+  sudo pkill -f -u root "vagrant-vmware-utility api"
 }
+
 # end
 
 # RVM
