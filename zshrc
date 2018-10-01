@@ -6,8 +6,15 @@ export PATH="$HOME/go/bin:$HOME/bin:$HOME/.bin:/usr/lib/go-1.10/bin:/usr/local/h
 
 # Work stuff
 export VAGRANT_INSTALLER_ENV=1
-# vmware vagrant plugin helper
-alias vmware="sudo $HOME/go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api"
+# vmware vagrant plugin helper functions
+function vmware () {
+  sudo $HOME/go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api
+}
+
+function killvmware () {
+  sudo kill -9 $(ps aux | grep -v sudo | grep -v grep | grep 'vagrant-vmware-utility api' | awk '{print $2}')
+}
+# end
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 PATH=$PATH:/usr/lib/go-1.9/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
