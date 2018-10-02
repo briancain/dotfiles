@@ -111,8 +111,9 @@ set -e
   elif [[ "$OSPACKMAN" == "apt" ]]; then
     echo "You are running apt"
     echo "Using apt to install packages...."
+    declare -a ubuntupackages=('silversearcher-ag')
     sudo apt-get update
-    sudo apt-get install "${packages[@]}" zsh
+    sudo apt-get install "${packages[@]}" "${ubuntupackages[@]}" zsh
   else
     echo "Machine not supported. Exiting..."
     exit 1
