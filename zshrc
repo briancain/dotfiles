@@ -14,7 +14,6 @@ function vmware () {
 function killvmware () {
   sudo pkill -f -u root "vagrant-vmware-utility api"
 }
-
 # end
 
 # RVM
@@ -26,11 +25,6 @@ PATH=$PATH:$HOME/go/bin:/usr/lib/go-1.10/bin
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 
 # My custom theme
 ZSH_THEME="brian"
@@ -59,16 +53,6 @@ alias la='ls -GA'
 
 # tree with color and hidden files
 alias tree="tree -C -a"
-
-# VIM
-alias v='vim'
-alias vf='vim -f'
-
-# Latex
-alias lpdf='pdflatex'
-alias lrtf='latex2rtf'
-
-alias n="t ls +next"
 
 # commands starting with % for pasting from web
 alias %=' '
