@@ -2,10 +2,10 @@
 export EDITOR='vim'
 export GPG_TTY=$(tty)
 export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
-# ENV VARS
-
 # Work stuff
 export VAGRANT_INSTALLER_ENV=1
+# ENV VARS
+
 # vmware vagrant plugin helper functions
 function vmware () {
   sudo $HOME/go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api
