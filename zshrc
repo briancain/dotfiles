@@ -7,7 +7,7 @@ export VAGRANT_INSTALLER_ENV=1
 # ENV VARS
 
 # vmware vagrant plugin helper functions
-function vmware () {
+function startvmware () {
   sudo $HOME/go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api
 }
 
