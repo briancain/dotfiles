@@ -127,7 +127,7 @@ set -e
   vim +BundleInstall +qall
 
   echo "Setting up colors..."
-  ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
+  ln -sf ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
 
   echo "Changing shells to ZSH"
   chsh -s /bin/zsh
