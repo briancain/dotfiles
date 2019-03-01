@@ -21,7 +21,7 @@ function killvmware () {
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Golang
-PATH=$PATH:$HOME/go/bin:/usr/lib/go-1.10/bin
+PATH=$PATH:$HOME/go/bin:/usr/lib/go-1.11/bin
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
