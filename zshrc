@@ -4,6 +4,7 @@ export GPG_TTY=$(tty)
 export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
 # Work stuff
 export VAGRANT_INSTALLER_ENV=1
+export GOPATH=/home/brian/go
 # ENV VARS
 
 # vmware vagrant plugin helper functions
