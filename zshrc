@@ -17,6 +17,12 @@ function killvmware () {
 }
 # end
 
+# Crusty workaround for fixing trackpad when waking up from sleep
+# Lenovo laptop with Ubuntu
+function restartmouse() {
+  sudo modprobe -r psmouse;sudo modprobe psmouse
+}
+
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
