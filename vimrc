@@ -312,6 +312,8 @@ nmap <F7> :NERDTreeToggle<CR>
 " Close the NERD Tree with Shift-F7
 nmap <S-F7> :NERDTreeClose<CR>
 
+let NERDTreeShowHidden=1
+
 "-----------------------------------------------------------------------------
 " Latex-Suite
 "-----------------------------------------------------------------------------
