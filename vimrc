@@ -18,11 +18,14 @@ set background=dark
 
 "-----------------------------------------------------------------------------
 "
-" Markdown Syntax
+" Syntax Highlighting
 "
 "-----------------------------------------------------------------------------
 
+" Markdown Syntax
 au BufRead,BufNewFile *.md set filetype=markdown
+" Powershell files
+autocmd BufNewFile,BufReadPost *.ps1 set filetype=ps1
 
 "-----------------------------------------------------------------------------
 " Vundle Config
@@ -54,6 +57,7 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/tabular'
 Plugin 'whatyouhide/vim-lengthmatters'
+Plugin 'PProvost/vim-ps1'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
