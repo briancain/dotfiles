@@ -24,6 +24,7 @@ set background=dark
 
 " Markdown Syntax
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.mdx set filetype=markdown
 " Powershell files
 autocmd BufNewFile,BufReadPost *.ps1 set filetype=ps1
 
