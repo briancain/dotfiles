@@ -67,10 +67,6 @@ Bundle "honza/vim-snippets"
 " Airline
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
-" Old plugins for future use?
-"Bundle 'vim-scripts/vim-niji'
-"Bundle 'vim-scripts/paredit.vim'
-"Bundle 'rodjek/vim-puppet'
 " Installing plugins the first time
 " If exists, skip
 if has_vundle == 0
