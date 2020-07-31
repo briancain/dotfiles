@@ -102,7 +102,6 @@ nnoremap <silent> <C-U> :GundoToggle<CR>
 "-----------------------------------------------------------------------------
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_statusline_ontop=1
 
 "-----------------------------------------------------------------------------
 " Encoding and general usability
