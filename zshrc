@@ -39,7 +39,9 @@ ZSH_THEME="brian"
 # Aliases
 
 # pbcopy but for ubuntu
-alias pbcopy="xclip -selection clipboard"
+if [ "$(uname 2> /dev/null)" = "Linux" ]; then
+    alias pbcopy="xclip -selection clipboard"
+fi
 
 # ssh
 alias datbc="ssh -t brian@www.briancain.net"
