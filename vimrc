@@ -157,8 +157,13 @@ endif
 " Macros
 "-----------------------------------------------------------------------------
 
+"
+" DEBUGGING RUBY
+"
+
 " Inserts a `pry` break on a newline
 map ,p orequire 'pry'<ENTER>binding.pry<ESC>
+map ,b obyebug<ESC>
 
 "-----------------------------------------------------------------------------
 " Search, highlight, spelling, etc.
