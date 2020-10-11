@@ -38,9 +38,11 @@ ZSH_THEME="brian"
 
 # Aliases
 
-# pbcopy but for ubuntu
+# Ubuntu specific
 if [ "$(uname 2> /dev/null)" = "Linux" ]; then
+    # pbcopy but for ubuntu
     alias pbcopy="xclip -selection clipboard"
+    alias open="xdg-open"
 fi
 
 # ssh
