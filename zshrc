@@ -7,6 +7,7 @@ export VAGRANT_INSTALLER_ENV=1
 export GOPATH=/home/brian/go
 # ENV VARS
 
+# Vagrant alias
 # vmware vagrant plugin helper functions
 function startvmware () {
   sudo --background $HOME/go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api
