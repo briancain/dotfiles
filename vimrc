@@ -29,6 +29,13 @@ au BufRead,BufNewFile *.mdx set filetype=markdown
 autocmd BufNewFile,BufReadPost *.ps1 set filetype=ps1
 
 "-----------------------------------------------------------------------------
+" ColorColumn for overflow
+"-----------------------------------------------------------------------------
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+"-----------------------------------------------------------------------------
 " Vundle Config
 "-----------------------------------------------------------------------------
 
@@ -57,7 +64,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/tabular'
-Plugin 'whatyouhide/vim-lengthmatters'
 Plugin 'PProvost/vim-ps1'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
