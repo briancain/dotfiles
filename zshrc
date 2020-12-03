@@ -5,6 +5,7 @@ export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/lo
 # Work stuff
 export VAGRANT_INSTALLER_ENV=1
 export GOPATH=/home/brian/go
+export GOBIN=$GOPATH/bin
 # ENV VARS
 
 # Vagrant alias
@@ -29,7 +30,7 @@ function restartmouse() {
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Golang
-PATH=$PATH:$HOME/go/bin:/usr/lib/go-1.14/bin
+PATH=$PATH:$HOME/go/bin:/usr/lib/go-1.15/bin
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh

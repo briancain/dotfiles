@@ -65,6 +65,7 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/tabular'
 Plugin 'PProvost/vim-ps1'
+Plugin 'fatih/vim-go'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
