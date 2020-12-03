@@ -1,7 +1,6 @@
 # ENV VARS
 export EDITOR='vim'
 export GPG_TTY=$(tty)
-export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
 # Work stuff
 export VAGRANT_INSTALLER_ENV=1
 export GOPATH=/home/brian/go
@@ -29,14 +28,14 @@ function restartmouse() {
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# Golang
-PATH=$PATH:$HOME/go/bin:/usr/lib/go-1.15/bin
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # My custom theme
 ZSH_THEME="brian"
+
+# PATH
+export PATH="$HOME/go/bin:/usr/lib/go-1.15/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
 
 # Aliases
 
