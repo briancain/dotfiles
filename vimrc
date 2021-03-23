@@ -9,15 +9,6 @@ let &t_Co=256
 
 "-----------------------------------------------------------------------------
 "
-" Color
-"
-"-----------------------------------------------------------------------------
-
-colorscheme gruvbox
-set background=dark
-
-"-----------------------------------------------------------------------------
-"
 " Syntax Highlighting
 "
 "-----------------------------------------------------------------------------
@@ -66,6 +57,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/tabular'
 Bundle 'PProvost/vim-ps1'
 Bundle 'fatih/vim-go'
+Bundle 'morhetz/gruvbox'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -109,6 +101,15 @@ nnoremap <silent> <C-U> :GundoToggle<CR>
 "-----------------------------------------------------------------------------
 
 let g:snipMate = { 'snippet_version': 1 }
+
+"-----------------------------------------------------------------------------
+"
+" Color
+"
+"-----------------------------------------------------------------------------
+
+autocmd vimenter * ++nested colorscheme gruvbox
+set background=dark
 
 "-----------------------------------------------------------------------------
 "
