@@ -74,6 +74,13 @@ if has_vundle == 0
     :BundleInstall
 endif
 
+
+"-----------------------------------------------------------------------------
+"
+" Plugin Configuration
+"
+"-----------------------------------------------------------------------------
+
 " Shortcuts for CtrlP
 let g:ctrlp_map = '<c-p>'
 " The Silver Searcher
@@ -93,12 +100,6 @@ filetype plugin indent on
 
 " Gundo mapping
 nnoremap <silent> <C-U> :GundoToggle<CR>
-
-"-----------------------------------------------------------------------------
-"
-" Plugin Configuration
-"
-"-----------------------------------------------------------------------------
 
 let g:snipMate = { 'snippet_version': 1 }
 
