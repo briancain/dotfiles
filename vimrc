@@ -108,8 +108,8 @@ let g:snipMate = { 'snippet_version': 1 }
 "
 "-----------------------------------------------------------------------------
 
-autocmd vimenter * ++nested colorscheme gruvbox
-set background=dark
+colorscheme gruvbox
+set bg=dark
 
 "-----------------------------------------------------------------------------
 "
