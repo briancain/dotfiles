@@ -3,7 +3,7 @@ export EDITOR='vim'
 export GPG_TTY=$(tty)
 # Work stuff
 export VAGRANT_INSTALLER_ENV=1
-export GOPATH=/home/brian/go
+export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 # ENV VARS
 
