@@ -18,6 +18,11 @@ function killvmware () {
 }
 # end
 
+# Docker aliases
+function docker-cleanup() {
+  docker stop $(docker ps -a -q);docker rm $(docker ps -a -q);docker system prune -f;docker volume prune -f
+}
+
 # Crusty workaround for fixing trackpad when waking up from sleep
 # Lenovo laptop with Ubuntu
 function restartmouse() {
