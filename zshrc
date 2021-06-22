@@ -19,8 +19,12 @@ function killvmware () {
 # end
 
 # Docker aliases
-function docker-cleanup() {
+function docker-system-cleanup() {
   docker stop $(docker ps -a -q);docker rm $(docker ps -a -q);docker system prune -f;docker volume prune -f
+}
+
+function docker-cleanup() {
+  docker stop $(docker ps -a -q);docker rm $(docker ps -a -q);docker volume prune -f
 }
 
 # Crusty workaround for fixing trackpad when waking up from sleep
