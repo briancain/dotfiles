@@ -44,7 +44,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="brian"
 
 # PATH
-export PATH="$HOME/go/bin:/usr/lib/go-1.15/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
+export PATH="$HOME/go/bin:/usr/lib/go-1.17/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
 
 # Aliases
 
