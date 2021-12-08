@@ -57,6 +57,7 @@ fi
 
 # neovim
 alias vim="nvim"
+alias oldvim="/usr/bin/vim"
 
 # ssh
 alias datbc="ssh -t brian@www.briancain.net"
