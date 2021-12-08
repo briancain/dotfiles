@@ -56,8 +56,11 @@ if [ "$(uname 2> /dev/null)" = "Linux" ]; then
 fi
 
 # neovim
-alias vim="nvim"
-alias oldvim="/usr/bin/vim"
+if ! nvim -version &> /dev/null
+then
+  alias vim="nvim"
+  alias oldvim="/usr/bin/vim"
+fi
 
 # ssh
 alias datbc="ssh -t brian@www.briancain.net"
