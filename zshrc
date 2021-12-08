@@ -55,6 +55,9 @@ if [ "$(uname 2> /dev/null)" = "Linux" ]; then
     alias open="xdg-open"
 fi
 
+# neovim
+alias vim="nvim"
+
 # ssh
 alias datbc="ssh -t brian@www.briancain.net"
 
