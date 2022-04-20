@@ -182,6 +182,12 @@ endif
 map ,p orequire 'pry'<ENTER>binding.pry<ESC>
 map ,b obyebug<ESC>
 
+"
+" Waypoint Changelog
+"
+
+map ,w o```release-note:FIXME<ENTER>type:TODO WRITE ME<ENTER>```<ESC>
+
 "-----------------------------------------------------------------------------
 " Search, highlight, spelling, etc.
 "-----------------------------------------------------------------------------
