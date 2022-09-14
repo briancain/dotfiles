@@ -58,6 +58,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'PProvost/vim-ps1'
 Bundle 'fatih/vim-go'
 Bundle 'morhetz/gruvbox'
+Plugin 'jvirtanen/vim-hcl'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
