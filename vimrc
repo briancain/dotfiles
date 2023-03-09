@@ -48,6 +48,8 @@ call vundle#rc()
 
 " Required Bundle
 Bundle 'gmarik/vundle'
+" My Local Plugins
+Plugin 'vim-hardlight'
 " Additional Bundles go here"
 Bundle 'L9'
 Bundle 'Gundo'
