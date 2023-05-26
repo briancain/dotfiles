@@ -33,10 +33,6 @@ function restartmouse() {
   sudo modprobe -r psmouse;sudo modprobe psmouse
 }
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -44,7 +40,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="brian"
 
 # PATH
-export PATH="$HOME/go/bin:/usr/lib/go-1.17/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
+export PATH="$HOME/go/bin:/usr/lib/go-1.17/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
 
 # Aliases
 
@@ -56,11 +52,8 @@ if [ "$(uname 2> /dev/null)" = "Linux" ]; then
 fi
 
 # neovim
-if ! nvim -version &> /dev/null
-then
-  alias vim="nvim"
-  alias oldvim="/usr/bin/vim"
-fi
+alias vim="nvim"
+alias oldvim="/usr/bin/vim"
 
 # ssh
 alias datbc="ssh -t brian@www.briancain.net"
@@ -93,6 +86,6 @@ alias %=' '
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm brew)
+plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
