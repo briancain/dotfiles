@@ -48,8 +48,12 @@ call vundle#rc()
 
 " Required Bundle
 Bundle 'gmarik/vundle'
-" My Local Plugins
+" Syntax Highlighters
 Plugin 'briancain/vim-hardlight'
+Plugin 'jvirtanen/vim-hcl'
+Plugin 'joukevandermaas/vim-ember-hbs'
+" Copilot
+Plugin 'github/copilot.vim'
 " Additional Bundles go here"
 Bundle 'L9'
 Bundle 'Gundo'
@@ -57,15 +61,14 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/tabular'
-Bundle 'PProvost/vim-ps1'
+" Bundle 'PProvost/vim-ps1'
 Bundle 'fatih/vim-go'
 Bundle 'morhetz/gruvbox'
-Plugin 'jvirtanen/vim-hcl'
 " Four needed for snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+" Bundle "garbas/vim-snipmate"
+" Bundle "honza/vim-snippets"
 " Airline
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
@@ -76,7 +79,6 @@ if has_vundle == 0
     echo ""
     :BundleInstall
 endif
-
 
 "-----------------------------------------------------------------------------
 "
