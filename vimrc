@@ -49,7 +49,6 @@ call vundle#rc()
 " Required Bundle
 Bundle 'gmarik/vundle'
 " Syntax Highlighters
-Plugin 'briancain/vim-hardlight'
 Plugin 'jvirtanen/vim-hcl'
 Plugin 'joukevandermaas/vim-ember-hbs'
 " Copilot
