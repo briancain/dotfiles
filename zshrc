@@ -55,16 +55,10 @@ fi
 alias vim="nvim"
 alias oldvim="/usr/bin/vim"
 
-# ssh
-alias datbc="ssh -t brian@www.briancain.net"
-
 # ruby stuff
 alias be='bundle exec'
 # rake [] fix for zsh
 alias rake='noglob rake'
-
-# IRC connection
-alias goirc="ssh -t brian@www.briancain.net screen -raAd"
 
 # Reload ZSH Config
 alias reload='. ~/.zshrc'
