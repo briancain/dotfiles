@@ -40,7 +40,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="brian"
 
 # PATH
-export PATH="$HOME/go/bin:/usr/lib/go-1.17/bin:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/.zig-install/zig-macos-aarch64-0.12.0-dev.1828+225fe6ddb:$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$PATH"
 
 # Aliases
 
@@ -83,3 +83,5 @@ alias %=' '
 plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
+
+eval "$(direnv hook zsh)"

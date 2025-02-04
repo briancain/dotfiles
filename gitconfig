@@ -4,18 +4,20 @@
 [init]
         defaultBranch = main
 [alias]
-        plog = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+	plog = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 [user]
-        name = Brian Cain
+	email = bcain@hashicorp.com
+	name = Brian Cain
 [pager]
-        branch = false
+	branch = false
 [url "git@github.com:"]
-        insteadOf = https://github.com/
+	insteadOf = https://github.com/
 [submodule]
-        recurse = true
+	recurse = true
 [filter "lfs"]
-        clean = git-lfs clean -- %f
-        smudge = git-lfs smudge -- %f
-        process = git-lfs filter-process
-        required = true
-
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[safe]
+	directory = /work
