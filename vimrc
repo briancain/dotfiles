@@ -107,6 +107,9 @@ nnoremap <silent> <C-U> :GundoToggle<CR>
 
 let g:snipMate = { 'snippet_version': 1 }
 
+let g:syntastic_go_checkers = ['govet', 'errcheck', 'go']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
 "-----------------------------------------------------------------------------
 "
 " Color
