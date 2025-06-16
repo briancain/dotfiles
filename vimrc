@@ -51,8 +51,6 @@ Bundle 'gmarik/vundle'
 " Syntax Highlighters
 Plugin 'jvirtanen/vim-hcl'
 Plugin 'joukevandermaas/vim-ember-hbs'
-" Copilot
-Plugin 'github/copilot.vim'
 " Additional Bundles go here"
 Bundle 'L9'
 Bundle 'Gundo'
