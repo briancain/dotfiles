@@ -2,30 +2,9 @@
 export EDITOR='vim'
 export GPG_TTY=$(tty)
 # Work stuff
-export VAGRANT_INSTALLER_ENV=1
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 # ENV VARS
-
-# Vagrant alias
-# vmware vagrant plugin helper functions
-function startvmware () {
-  sudo --background $HOME/go/src/github.com/hashicorp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/vagrant-vmware-utility api
-}
-
-function killvmware () {
-  sudo pkill -f -u root "vagrant-vmware-utility api"
-}
-# end
-
-# Docker aliases
-function docker-system-cleanup() {
-  docker stop $(docker ps -a -q);docker rm $(docker ps -a -q);docker system prune -f;docker volume prune -f
-}
-
-function docker-cleanup() {
-  docker stop $(docker ps -a -q);docker rm $(docker ps -a -q);docker volume prune -f
-}
 
 # Crusty workaround for fixing trackpad when waking up from sleep
 # Lenovo laptop with Ubuntu
